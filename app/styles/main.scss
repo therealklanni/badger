@@ -3,19 +3,32 @@ $iconWhiteSpritePath: "../images/glyphicons-halflings-white.png";
 
 @import 'sass-bootstrap/lib/responsive';
 
-.badge-front {}
+.badge-front {
+	position: relative;
+}
 
 .badge-back {
 	position: relative;
 }
 
 .badge-base {
-	width: 2in;
+	width: 50mm;
 }
 
 .badge-green-blank {
-	width: 1.25in;
+	width: 32mm;
 	position: absolute;
-	bottom: 0.60in;
-	left: 0.60in;
+	bottom: 15mm;
+	left: 15mm;
 }
+
+.badge-logo, .badge-qr {
+	width: 38mm;
+	height: 38mm;
+	background-color: red;
+	position: absolute;
+	top: 25mm;
+	left: 6mm;
+}
+
+[contenteditable]:hover, [contenteditable="true"]:hover { outline: 2px dashed #333; }
