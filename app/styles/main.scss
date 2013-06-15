@@ -1,9 +1,21 @@
 $iconSpritePath: "../images/glyphicons-halflings.png";
 $iconWhiteSpritePath: "../images/glyphicons-halflings-white.png";
 
-@import 'sass-bootstrap/lib/bootstrap';
+@import 'sass-bootstrap/lib/responsive';
 
-.hero-unit {
-    margin: 50px auto 0 auto;
-    width: 300px;
+.badge-front {}
+
+.badge-back {
+	position: relative;
+}
+
+.badge-base {
+	width: 2in;
+}
+
+.badge-green-blank {
+	width: 1.25in;
+	position: absolute;
+	bottom: 0.60in;
+	right: 1.80in;
 }
