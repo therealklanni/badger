@@ -13,12 +13,14 @@ $iconWhiteSpritePath: "../images/glyphicons-halflings-white.png";
 
 .badge-base {
 	width: 50mm;
+	height: 80mm;
+	outline: 1px dashed #333;
 }
 
 .badge-green-blank {
 	width: 32mm;
 	position: absolute;
-	bottom: 15mm;
+	bottom: 14mm;
 	left: 15mm;
 }
 
@@ -31,4 +33,4 @@ $iconWhiteSpritePath: "../images/glyphicons-halflings-white.png";
 	left: 6mm;
 }
 
-[contenteditable]:hover, [contenteditable="true"]:hover { outline: 2px dashed #333; }
+.editable:hover { outline: 2px dashed #333; }
