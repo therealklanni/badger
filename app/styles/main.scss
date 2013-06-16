@@ -25,12 +25,22 @@ $iconWhiteSpritePath: "../images/glyphicons-halflings-white.png";
 }
 
 .badge-logo, .badge-qr {
-	width: 38mm;
-	height: 38mm;
+	width: 36mm;
+	height: 36mm;
 	background-color: red;
 	position: absolute;
-	top: 25mm;
-	left: 6mm;
+	top: 28mm;
+	left: 7mm;
+}
+
+.badge-codename {
+	width: 36mm;
+	text-align: center;
+	font-weight: bold;
+	color: #333;
+	position: absolute;
+	top: 23mm;
+	left: 7mm;
 }
 
 .editable:hover { outline: 2px dashed #333; }
