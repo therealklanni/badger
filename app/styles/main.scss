@@ -43,4 +43,18 @@ $iconWhiteSpritePath: "../images/glyphicons-halflings-white.png";
 	left: 7mm;
 }
 
+.badge-community {
+	width: 34mm;
+	height: 10mm;
+	display: inline-block;
+	overflow: hidden;
+	line-height: 10mm;
+	text-align: center;
+	font-weight: bold;
+	color: #333;
+	position: absolute;
+	bottom: 14mm;
+	left: 14mm;
+}
+
 .editable:hover { outline: 2px dashed #333; }
