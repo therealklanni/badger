@@ -29,7 +29,7 @@ $iconWhiteSpritePath: "../images/glyphicons-halflings-white.png";
 	height: 36mm;
 	background-color: red;
 	position: absolute;
-	top: 13mm;
+	top: 12mm;
 	left: 7mm;
 }
 
@@ -107,6 +107,25 @@ $iconWhiteSpritePath: "../images/glyphicons-halflings-white.png";
 	position: absolute;
 	bottom: 0;
 	right: 0;
+}
+
+.badge-scancode-blank {
+	width: 30mm;
+	height: 5mm;
+	position: absolute;
+	top: 50.5mm;
+	left: 2mm;
+	background-color: white;
+}
+
+.badge-scancode-corner {
+	width: 0;
+	height: 0;
+	position: absolute;
+	top: 0;
+	left: 30mm;
+	border-right: 5.1mm solid transparent;
+	border-bottom: 5.1mm solid white;
 }
 
 .editable:hover { outline: 2px dashed #333; }
