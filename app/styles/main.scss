@@ -28,7 +28,6 @@ $iconWhiteSpritePath: "../images/glyphicons-halflings-white.png";
 .badge-logo, .badge-qr {
 	width: 36mm;
 	height: 36mm;
-	background-color: red;
 	position: absolute;
 	top: 12mm;
 	left: 7mm;
@@ -127,6 +126,14 @@ $iconWhiteSpritePath: "../images/glyphicons-halflings-white.png";
 	left: 30mm;
 	border-right: 5.1mm solid transparent;
 	border-bottom: 5.1mm solid white;
+}
+
+.badge-scancode {
+	width: 29mm;
+	position: absolute;
+	top: 0.5mm;
+	left: 0.5mm;
+	background-color: white;
 }
 
 .badge-link {
