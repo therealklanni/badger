@@ -73,42 +73,6 @@ $iconWhiteSpritePath: "../images/glyphicons-halflings-white.png";
 	background-color: transparent !important;
 }
 
-.badge-flag-tl {
-	width: 0;
-	height: 0;
-	position: absolute;
-	top: 0;
-	left: 0;
-	border-left: 4mm solid transparent;
-	border-bottom: 4mm solid transparent;
-	border-left-color: transparent !important;
-	background-color: transparent !important;
-}
-
-.badge-flag-tr {
-	width: 6mm;
-	height: 6mm;
-	position: absolute;
-	top: 0;
-	right: 0;
-}
-
-.badge-flag-bl {
-	width: 5mm;
-	height: 7.1mm;
-	position: absolute;
-	bottom: 0;
-	left: 0;
-}
-
-.badge-flag-br {
-	width: 5mm;
-	height: 6mm;
-	position: absolute;
-	bottom: 0;
-	right: 0;
-}
-
 .badge-scancode-blank {
 	width: 30mm;
 	height: 5mm;
