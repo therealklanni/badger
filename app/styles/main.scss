@@ -128,6 +128,16 @@ $iconWhiteSpritePath: "../images/glyphicons-halflings-white.png";
 	border-bottom: 5.1mm solid white;
 }
 
+.badge-link {
+	width: 32mm;
+	position: absolute;
+	top: 49mm;
+	left: 9mm;
+	text-align: center;
+	font-weight: bold;
+	color: #333;
+}
+
 .editable:hover { outline: 2px dashed #333; }
 .res { color: #00c2ff; }
 .enl { color: #28f428; }
