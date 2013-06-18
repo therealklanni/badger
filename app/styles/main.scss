@@ -34,13 +34,15 @@ $iconWhiteSpritePath: "../images/glyphicons-halflings-white.png";
 }
 
 .badge-codename {
-	width: 36mm;
+	width: 40mm;
 	text-align: center;
+	font-size: 20px;
 	font-weight: bold;
+	font-family: Iceland;
 	color: #333;
 	position: absolute;
 	top: 6mm;
-	left: 7mm;
+	left: 5mm;
 }
 
 .badge-community {
@@ -50,8 +52,9 @@ $iconWhiteSpritePath: "../images/glyphicons-halflings-white.png";
 	overflow: hidden;
 	line-height: 10mm;
 	text-align: center;
-	font-weight: bold;
-	color: #333;
+	font-weight: 700;
+	font-family: Economica;
+	color: #000;
 	position: absolute;
 	bottom: 13.8mm;
 	left: 2.3mm;
@@ -67,9 +70,10 @@ $iconWhiteSpritePath: "../images/glyphicons-halflings-white.png";
 
 .badge-level {
 	position: absolute;
-	top: 0;
-	left: 2.5mm;
-	font-size: 8mm;
+	top: 0.5mm;
+	left: 3mm;
+	font-size: 10mm;
+	font-family: Iceland;
 	background-color: transparent !important;
 }
 
@@ -103,10 +107,12 @@ $iconWhiteSpritePath: "../images/glyphicons-halflings-white.png";
 .badge-link {
 	width: 32mm;
 	position: absolute;
-	top: 49mm;
+	top: 47mm;
 	left: 9mm;
 	text-align: center;
 	font-weight: bold;
+	font-family: Iceland;
+	font-size: 12px;
 	color: #333;
 }
 
