@@ -22,3 +22,36 @@ $('#setLevel').spinner({
 		}
 	}
 });
+
+$('.badge-logo, .badge-qr').on({
+	dragover: function(event) {
+		event.stopPropagation();
+		event.preventDefault();
+	},
+	dragenter: function(event) {
+		event.stopPropagation();
+		event.preventDefault();
+	},
+	drop: function(event) {
+		event.stopPropagation();
+		event.preventDefault();
+
+		console.debug(event);
+		var reader = new FileReader(),
+			file = event.originalEvent.dataTransfer.files[0];
+
+		if (file.type.match('image.*')) {
+			console.debug('image!');
+			reader.onload = (function(image) {
+				return function(e) {
+					event.target.src = e.target.result;
+				}
+			})(file);
+
+			reader.readAsDataURL(file);
+		} else {
+			// TODO warn user of unsupported file type
+			return false;
+		}
+	}
+});
