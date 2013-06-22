@@ -20,7 +20,7 @@
 	<body>
 		<div class="container">
 			<div class="row">
-				<div class="span3 offset2">
+				<div class="span3">
 					<h1>Front</h1>
 					<div class="badge-front">
 						<img src="images/enl-blank-front.png" alt="" class="badge-base">
@@ -53,11 +53,20 @@
 					</div>
 				</div>
 				<div class="span3">
-					<h2>Settings</h2>
-					<label for="setLevel">Set your level:</label>
-					<input name="level" id="setLevel">
+					<h2>Instructions</h2>
+					<ol>
+						<li>
+							<label for="setLevel">Set your level:</label>
+							<input id="setLevel" name="level" value="0">
+						</li>
+						<li>
+							Upload your community logo by clicking the upload button and selecting an image, or by dragging an image onto the default logo.
+							<br>
+							<input type="file" id="userLogo" name="userLogo">
+						</li>
+					</ol>
 				</div>
-				<div class="badge-back span3 offset2">
+				<div class="badge-back span3">
 					<h1>Back</h1>
 					<div class="badge-back">
 						<img src="images/enl-blank-back.png" alt="" class="badge-base">
