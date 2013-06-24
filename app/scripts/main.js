@@ -36,12 +36,10 @@ $('.badge-logo, .badge-qr').on({
 		event.stopPropagation();
 		event.preventDefault();
 
-		console.debug(event);
 		var reader = new FileReader(),
 			file = event.originalEvent.dataTransfer.files[0];
 
 		if (file.type.match('image.*')) {
-			console.debug('image!');
 			reader.onload = (function(image) {
 				return function(e) {
 					event.target.src = e.target.result;
