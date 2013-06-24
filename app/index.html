@@ -20,7 +20,7 @@
 	<body>
 		<div class="container">
 			<div class="row">
-				<div class="span3">
+				<div class="span4">
 					<h1>Front</h1>
 					<div class="badge-front">
 						<img src="images/enl-blank-front.png" alt="" class="badge-base">
@@ -52,21 +52,7 @@
 						</div>
 					</div>
 				</div>
-				<div class="span3 hidden-print">
-					<h2>Instructions</h2>
-					<ol>
-						<li>Enter your codename</li>
-						<li>
-							<label for="setLevel">Set your level:</label>
-							<input id="setLevel" name="level" value="0">
-						</li>
-						<li>
-							Upload your community logo by dragging an image onto the default logo, or select one here:
-							<input type="file" id="userLogo" name="userLogo">
-						</li>
-					</ol>
-				</div>
-				<div class="badge-back span3">
+				<div class="badge-back span4">
 					<h1>Back</h1>
 					<div class="badge-back">
 						<img src="images/enl-blank-back.png" alt="" class="badge-base">
@@ -76,11 +62,21 @@
 						<span class="editable badge-community" contenteditable>COMMUNITY</span>
 					</div>
 				</div>
-				<div class="span3 hidden-print">
-					<ol start="4">
+				<div class="span4 hidden-print">
+					<h2>Instructions</h2>
+					<ol>
+						<li>Enter your codename</li>
+						<li>
+							<label for="setLevel">Set your level:</label>
+							<input id="setLevel" name="level" value="0">
+						</li>
+						<li>
+							Upload your community logo by dragging an image onto the default logo, or select one here:
+							<br><input type="file" id="userLogo" name="userLogo">
+						</li>
 						<li>
 							Upload your QR code by dragging an image onto the default QR code, or select one here:
-							<input type="file" id="userQr" name='userQr'>
+							<br><input type="file" id="userQr" name='userQr'>
 						</li>
 						<li>Enter the short URL that corresponds to your QR code</li>
 						<li>Enter your community's name</li>
