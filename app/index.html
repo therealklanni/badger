@@ -6,7 +6,7 @@
 	<head>
 		<meta charset="utf-8">
 		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-		<title></title>
+		<title>Badger - Ingress Community Badge Creator</title>
 		<meta name="description" content="">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
@@ -18,7 +18,18 @@
 		<!-- endbuild -->
 	</head>
 	<body>
+
 		<div class="container">
+
+			<div class="navbar hidden-print">
+				<div class="navbar-inner">
+					<span class="brand">Badger</span>
+					<ul class="nav">
+						<li><a href="#about">About</a></li>
+					</ul>
+				</div>
+			</div>
+
 			<div class="row">
 				<div class="span4">
 					<h1>Front</h1>
@@ -72,18 +83,34 @@
 						</li>
 						<li>
 							Upload your community logo by dragging an image onto the default logo, or select one here:
-							<br><input type="file" id="userLogo" name="userLogo">
+							<br><input type="file" id="userLogo" name="userLogo" data-img="badge-logo">
 						</li>
 						<li>
 							Upload your QR code by dragging an image onto the default QR code, or select one here:
-							<br><input type="file" id="userQr" name='userQr'>
+							<br><input type="file" id="userQr" name='userQr' data-img="badge-qr">
 						</li>
 						<li>Enter the short URL that corresponds to your QR code</li>
 						<li>Enter your community's name</li>
-						<li>Print out your new custom badge!</li>
+						<li>Print out this page for your new badge!</li>
 					</ol>
 				</div>
 			</div>
+
+			<div class="row hidden-print">
+				<div class="span12">
+					<h1 id="about">What is this?</h1>
+					<p class="lead">
+						<em>Badger</em> is a custom community identification badge generator for Ingress field agents.
+					</p>
+					<p>
+						Simply follow the instructions above and print out this page. Only the important stuff will be printed. You can then cut out the images and laminate them in an ID badge style laminating pouch<sup>1</sup>. Show your faction pride and support your community!
+					</p>
+					<p>
+						<small>1. Designed to fit 57mm x 95mm (2-1/4" x 3-3/4") pouches. Use 5 mil thickness for better durability.</small>
+					</p>
+				</div>
+			</div>
+
 		</div>
 
 		<!--[if lt IE 7]>
