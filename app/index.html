@@ -23,12 +23,30 @@
 
 			<div class="navbar hidden-print">
 				<div class="navbar-inner">
-					<span class="brand">Badger</span>
-					<ul class="nav">
-						<li><a href="#about">About</a></li>
-					</ul>
+					<div class="container">
+						<button type="button" class="btn btn-navbar collapsed" data-toggle="collapse" data-target=".nav-collapse">
+							<span class="icon-bar"></span>
+							<span class="icon-bar"></span>
+							<span class="icon-bar"></span>
+						</button>
+						<span class="brand">Badger</span>
+						<div class="nav-collapse collapse">
+							<ul class="nav">
+								<li><a href="#about">About</a></li>
+								<li><a href="#contrib">Contribute</a></li>
+							</ul>
+							<ul class="nav nudge-down10 pull-right">
+								<li>
+									<iframe src="http://ghbtns.com/github-btn.html?user=therealklanni&repo=badger&type=watch&count=false"
+		  allowtransparency="true" frameborder="0" scrolling="0" width="124" height="20"></iframe>
+								</li>
+							</ul>
+						</div>
+					</div>
 				</div>
 			</div>
+
+			<br>
 
 			<div class="row">
 				<div class="span4">
@@ -96,6 +114,8 @@
 				</div>
 			</div>
 
+			<br>
+
 			<div class="row hidden-print">
 				<div class="span12">
 					<h1 id="about">What is this?</h1>
@@ -108,6 +128,25 @@
 					<p>
 						<small>1. Designed to fit 57mm x 95mm (2-1/4" x 3-3/4") pouches. Use 5 mil thickness for better durability.</small>
 					</p>
+				</div>
+			</div>
+
+			<br>
+
+			<div class="row hidden-print">
+				<div class="span12">
+					<h1 id="contrib">Contribute</h1>
+					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut venenatis metus sit amet iaculis aliquam. Mauris et auctor quam, sit amet imperdiet neque. Cras in ante massa. Etiam ut mattis nunc. Maecenas vel libero neque. Maecenas ultrices erat eu semper dictum. Sed a pharetra urna, in molestie tortor. Donec eleifend libero risus, eget vehicula purus hendrerit ut.</p>
+					<br>
+					<h2>GitHub</h2>
+					<div class="span3">
+						<iframe src="http://ghbtns.com/github-btn.html?user=therealklanni&repo=badger&type=fork&count=false&size=large"
+	allowtransparency="true" frameborder="0" scrolling="0" width="100%" height="30"></iframe>
+					</div>
+					<div class="span4">
+						<iframe src="http://ghbtns.com/github-btn.html?user=therealklanni&type=follow&count=false&size=large"
+	allowtransparency="true" frameborder="0" scrolling="0" width="100%" height="30"></iframe>
+					</div>
 				</div>
 			</div>
 
@@ -128,6 +167,7 @@
 		<!-- build:js scripts/main.js -->
 		<script src="bower_components/jquery/jquery.js"></script>
 		<script src="bower_components/jquery-ui/ui/minified/jquery-ui.min.js"></script>
+		<script src="bower_components/sass-bootstrap/js/bootstrap-collapse.js"></script>
 		<script src="scripts/main.js"></script>
 		<!-- endbuild -->
 
