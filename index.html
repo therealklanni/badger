@@ -1,0 +1,206 @@
+<!doctype html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+		<title>Badger - Ingress Community Badge Creator</title>
+		<meta name="description" content="">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+		<link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Economica:700|Iceland" type="text/css">
+		<link rel="stylesheet" href="bower_components/jquery-ui/themes/le-frog/jquery-ui.min.css">
+		<link rel="stylesheet" href="styles/13bdc63d.main.css">
+		<script src="scripts/vendor/f7f27360.modernizr.js"></script>
+	</head>
+	<body>
+
+		<div class="container">
+
+			<div class="navbar hidden-print">
+				<div class="navbar-inner">
+					<div class="container">
+						<button type="button" class="btn btn-navbar collapsed" data-toggle="collapse" data-target=".nav-collapse">
+							<span class="icon-bar"></span>
+							<span class="icon-bar"></span>
+							<span class="icon-bar"></span>
+						</button>
+						<span class="brand">Badger</span>
+						<div class="nav-collapse collapse">
+							<ul class="nav">
+								<li><a href="#about">About</a></li>
+								<li><a href="#contrib">Contribute</a></li>
+							</ul>
+							<ul class="nav pull-right">
+								<li class="nudge-down6">
+									<div class="g-plusone" data-annotation="inline" data-width="120" data-href="https://github.com/therealklanni/badger"></div>
+								</li>
+								<li class="nudge-down10">
+									<iframe src="http://ghbtns.com/github-btn.html?user=therealklanni&repo=badger&type=watch&count=false" allowtransparency="true" frameborder="0" scrolling="0" width="124" height="20"></iframe>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<br>
+
+			<div class="row">
+				<div class="span4">
+					<h1>Front</h1>
+					<div class="badge-front">
+						<img src="images/31480689.enl-blank-front.png" alt="" class="badge-base">
+						<img src="images/31a07d21.default-logo.png" alt="" class="editable badge-logo">
+						<span class="editable badge-codename" contenteditable="">CODENAME</span>
+						<div class="badge-flag">
+							<svg id="badge-flag-svg" xmlns:svg="http://www.w3.org/2000/svg" xmlns="http://www.w3.org/2000/svg" width="13px" height="14px" preserveaspectratio="xMinYMin meet" viewbox="0 0 13 14" style="width: 10mm; height: 11mm" version="1.1">
+								<g id="layer1">
+									<path style="fill:#333;fill-rule:evenodd;stroke:#333;stroke-width:0px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:0" d="m 6.0363862,0.51025186 7.4707508,0.041935 0,14 -13,0 0,-8.4180287 z" id="rect3007">
+								</g>
+							</svg>
+							<span class="badge-level lv0">0</span>
+						</div>
+						<div class="badge-scancode-blank">
+							<div class="badge-scancode-corner"></div>
+							<img src="images/3c825610.default-scancode.png" alt="" class="editable badge-scancode">
+						</div>
+					</div>
+				</div>
+				<div class="badge-back span4">
+					<h1>Back</h1>
+					<div class="badge-back">
+						<img src="images/a1bb196d.enl-blank-back.png" alt="" class="badge-base">
+						<img src="images/efebce32.enl-blank-green.png" alt="" class="badge-green-blank">
+						<img src="images/77ee982d.default-qr.png" alt="" class="editable badge-qr">
+						<span class="editable badge-link" contenteditable="">goo.gl/link</span>
+						<span class="editable badge-community" contenteditable="">COMMUNITY</span>
+					</div>
+				</div>
+				<div class="span4 hidden-print">
+					<h2>Instructions</h2>
+					<ol>
+						<li>Enter your codename</li>
+						<li>
+							<label for="setLevel">Set your level:</label>
+							<input id="setLevel" name="level" value="0">
+						</li>
+						<li>
+							Upload your community logo by dragging an image onto the default logo, or select one here:
+							<br><input type="file" id="userLogo" name="userLogo" data-img="badge-logo">
+						</li>
+						<li>
+							Upload your QR code by dragging an image onto the default QR code, or select one here:
+							<br><input type="file" id="userQr" name="userQr" data-img="badge-qr">
+						</li>
+						<li>Enter the short URL that corresponds to your QR code</li>
+						<li>Enter your community's name</li>
+						<li>Print out this page for your new badge!</li>
+					</ol>
+				</div>
+			</div>
+
+			<br>
+
+			<div class="row hidden-print">
+				<div class="span12">
+					<h1 id="about">What is this?</h1>
+					<p class="lead">
+						<em>Badger</em> is a customizable identification badge generator for Ingress field agents.
+					</p>
+					<p>
+						Simply follow the instructions above and print out this page. Only the important stuff will be printed. You can then cut out<sup>1</sup> the images and laminate them in an ID badge style laminating pouch<sup>2</sup>. Show your faction pride and support your community!
+					</p>
+					<p>
+						Once printed and cut-out, the badge should be just the right size to leave room at the top of the laminating pouch that you can punch it out with a slot punch and hang it from a lanyard or badge-clip. Be sure to laminate it in such a way that the extra space is all at the top edge of your badge.
+					</p>
+					<p>
+						If you don't have the laminate or a laminator, take the cut-out pieces (and maybe a couple extras, just in case) to your nearest full-service copy shop for assistance. They probably sell lanyards and badge-clips as well. If you want to get real fancy, you could even have them print it out on high-quality stock for a more professional look.
+					</p>
+					<p>
+						<small>1. For best results cut inside the dotted lines, leaving approximately 1-2mm on the outside edges.</small><br>
+						<small>2. Designed to fit 57mm x 95mm (2-1/4" x 3-3/4") pouches. Use 5 mil thickness for better durability.</small>
+					</p>
+				</div>
+			</div>
+
+			<br>
+
+			<div class="row hidden-print">
+				<div class="span12">
+					<h1 id="contrib">Contribute</h1>
+					<p>If you would like to see additional features added to this project, there are a couple of ways you can get involved:</p>
+					<ul>
+						<li>Submit a <a href="https://github.com/therealklanni/badger/issues">feature request</a><sup>3</sup></li>
+						<li>Found a bug? Something not aligning properly? Doesn't print properly? <a href="https://github.com/therealklanni/badger/issues">Report it!</a></li>
+						<li>Fork the project on <a href="https://github.com/therealklanni/badger">GitHub</a> and contribute directly with pull-requests</li>
+					</ul>
+					<div class="row">
+						<div class="span2 offset1">
+							<iframe src="http://ghbtns.com/github-btn.html?user=therealklanni&repo=badger&type=fork&count=false&size=large" allowtransparency="true" frameborder="0" scrolling="0" width="100%" height="30"></iframe>
+							<br>
+						</div>
+						<div class="span4">
+							<iframe src="http://ghbtns.com/github-btn.html?user=therealklanni&type=follow&count=false&size=large" allowtransparency="true" frameborder="0" scrolling="0" width="100%" height="30"></iframe>
+							<br>
+						</div>
+					</div>
+					<p><small>3. Please label feature requests as an "enhancement" (look for the "add labels" heading).</small></p>
+				</div>
+			</div>
+
+			<br>
+
+			<div class="row hidden-print">
+				<div class="span12">
+					<h3>Sponsored by</h3>
+					<!-- Replace the ID below with your G+ Page ID -->
+					<div class="g-plus" data-width="350" data-href="//plus.google.com/108910164412297335014" data-rel="publisher"></div>
+				</div>
+			</div>
+
+			<!-- IMPORTANT - the attributions and license information in this section must be kept intact -->
+			<div class="row hidden-print">
+				<div class="span12">
+					<footer class="footer">
+						<div class="well well-large">
+							<p><small>
+								Badge design by <a href="https://plus.google.com/u/0/112556850082362131447" target="_blank">Kevin Lanni</a>, <a href="https://plus.google.com/u/0/106362086604476183109" target="_blank">Brandon Graham</a>, and <a href="https://plus.google.com/u/0/111026822348045714976" target="_blank">Nathan Brandt</a>.
+								Page source available under <a href="http://opensource.org/licenses/MIT">The MIT License (MIT)</a>. Copyright &copy; 2013 Kevin Lanni.
+							</small></p>
+						</div>
+					</footer>
+				</div>
+			</div>
+
+		</div>
+
+		<!--[if lt IE 7]>
+			<p class="chromeframe">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">activate Google Chrome Frame</a> to improve your experience.</p>
+		<![endif]-->
+
+		<!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
+		<script>
+			var _gaq=[['_setAccount','UA-XXXXX-X'],['_trackPageview']];
+			(function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
+			g.src='//www.google-analytics.com/ga.js';
+			s.parentNode.insertBefore(g,s)}(document,'script'));
+		</script>
+
+		<script type="text/javascript">
+			(function() {
+				var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true;
+				po.src = 'https://apis.google.com/js/plusone.js';
+				var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);
+			})();
+		</script>
+
+		<script src="scripts/14a54794.main.js"></script>
+
+		<script src="scripts/d41d8cd9.coffee.js"></script>
+
+		<script src="scripts/d41d8cd9.plugins.js"></script>
+</body>
+</html>
