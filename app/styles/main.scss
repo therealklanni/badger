@@ -1,0 +1,140 @@
+$iconSpritePath: "../images/glyphicons-halflings.png";
+$iconWhiteSpritePath: "../images/glyphicons-halflings-white.png";
+
+@import 'sass-bootstrap/lib/bootstrap';
+@import 'sass-bootstrap/lib/responsive';
+
+.badge-front {
+	position: relative;
+}
+
+.badge-back {
+	position: relative;
+}
+
+.badge-base {
+	width: 50mm;
+	height: 80mm;
+	outline: 1px dashed #333;
+}
+
+.badge-green-blank {
+	width: 45.3mm;
+	height: 10mm;
+	position: absolute;
+	bottom: 12.8mm;
+	left: 2.3mm;
+}
+
+.badge-logo, .badge-qr {
+	width: 36mm;
+	height: 36mm;
+	position: absolute;
+	top: 12mm;
+	left: 7mm;
+}
+
+.badge-codename {
+	width: 40mm;
+	text-align: center;
+	font-size: 20px;
+	font-weight: bold;
+	font-family: Iceland;
+	color: #333;
+	position: absolute;
+	top: 6mm;
+	left: 5mm;
+}
+
+.badge-community {
+	width: 45.3mm;
+	height: 10mm;
+	display: inline-block;
+	overflow: hidden;
+	line-height: 10mm;
+	text-align: center;
+	font-weight: 700;
+	font-family: Economica;
+	color: #000;
+	position: absolute;
+	bottom: 12.8mm;
+	left: 2.3mm;
+}
+
+.badge-flag {
+	position: absolute;
+	height: 11mm;
+	width: 10mm;
+	top: 45.1mm;
+	left: 38.5mm;
+}
+
+.badge-level {
+	position: absolute;
+	top: 2.5mm;
+	left: 3mm;
+	font-size: 10mm;
+	font-family: Iceland;
+	background-color: transparent !important;
+}
+
+.badge-scancode-blank {
+	width: 30mm;
+	height: 5mm;
+	position: absolute;
+	top: 50.5mm;
+	left: 2mm;
+	background-color: white;
+}
+
+.badge-scancode-corner {
+	width: 0;
+	height: 0;
+	position: absolute;
+	top: 0;
+	left: 30mm;
+	border-right: 5.1mm solid transparent;
+	border-bottom: 5.1mm solid white;
+}
+
+.badge-scancode {
+	width: 29mm;
+	position: absolute;
+	top: 0.5mm;
+	left: 0.5mm;
+	background-color: white;
+}
+
+.badge-link {
+	width: 32mm;
+	position: absolute;
+	top: 49mm;
+	left: 9mm;
+	text-align: center;
+	font-weight: bold;
+	font-family: Iceland;
+	font-size: 12px;
+	color: #333;
+}
+
+#setLevel {
+	width: 10px;
+}
+
+.editable:hover { outline: 2px dashed #333; }
+.res { color: #00c2ff; }
+.enl { color: #28f428; }
+.neu { color: #f9f9f9; }
+.lv0 { background-color: #333; border-color: #333; color: orange !important; }
+.lv1 { background-color: #fece5a; border-color: #fece5a; color: #333;  }
+.lv2 { background-color: #ffa630; border-color: #ffa630; color: #333;  }
+.lv3 { background-color: #ff7315; border-color: #ff7315; color: #333;  }
+.lv4 { background-color: #e40000; border-color: #e40000; color: #333;  }
+.lv5 { background-color: #fd2992; border-color: #fd2992; color: #333;  }
+.lv6 { background-color: #eb26cd; border-color: #eb26cd; color: #333;  }
+.lv7 { background-color: #c124e0; border-color: #c124e0; color: #333;  }
+.lv8 { background-color: #9627f4; border-color: #9627f4; color: orange !important;  }
+.nudge-down6 { margin-top: 6px !important; }
+.nudge-down10 { margin-top: 10px !important; }
+.footer { margin-top: 40px; }
+.footer p { text-align: center; margin: 0; }

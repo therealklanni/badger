@@ -1,0 +1,16 @@
+# humanstxt.org/
+# The humans responsible & technology colophon
+
+# TEAM
+
+    Kevin Lanni -- Developer
+
+# THANKS
+
+    "Open Your Mind" Ingress community on Google+
+
+# TECHNOLOGY COLOPHON
+
+    HTML5, CSS3
+    jQuery, Modernizr, Twitter Bootstrap
+
