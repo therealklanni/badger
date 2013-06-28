@@ -1,10 +1,11 @@
 {
-  "name": "badger-yo",
-  "version": "0.0.0",
+  "name": "badger",
+  "version": "1.0.0",
   "dependencies": {
     "sass-bootstrap": "~2.3.0",
     "modernizr": "~2.6.2",
-    "jquery": "~1.9.1"
+    "jquery": "~2.0.2",
+    "jquery-ui": "~1.10.3"
   },
   "devDependencies": {}
 }
