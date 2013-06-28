@@ -12,7 +12,7 @@
 		<!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
 		<link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Economica:700|Iceland" type="text/css">
 		<link rel="stylesheet" href="styles/55be207c.jqueryui.css">
-		<link rel="stylesheet" href="styles/13bdc63d.main.css">
+		<link rel="stylesheet" href="styles/be3eeb55.main.css">
 		<script src="scripts/vendor/f7f27360.modernizr.js"></script>
 	</head>
 	<body>
@@ -82,23 +82,37 @@
 				<div class="span4 hidden-print">
 					<h2>Instructions</h2>
 					<ol>
-						<li>Enter your codename</li>
+						<li>
+							<label for="setCodename">Enter your codename:</label>
+							<input type="text" id="setCodename" name="codename" placeholder="CODENAME" data-target=".badge-codename">
+						</li>
 						<li>
 							<label for="setLevel">Set your level:</label>
 							<input id="setLevel" name="level" value="0">
 						</li>
 						<li>
-							Upload your community logo by dragging an image onto the default logo, or select one here:
-							<br><input type="file" id="userLogo" name="userLogo" data-img="badge-logo">
+							Upload your community logo<sup>1</sup> by dragging an image onto the default logo, or select one here:
+							<input type="file" id="userLogo" name="userLogo" data-target=".badge-logo">
 						</li>
 						<li>
-							Upload your QR code by dragging an image onto the default QR code, or select one here:
-							<br><input type="file" id="userQr" name="userQr" data-img="badge-qr">
+							Upload your QR tag<sup>2</sup> by dragging an image onto the default QR tag, or select one here:
+							<input type="file" id="userQr" name="userQr" data-target=".badge-qr">
 						</li>
-						<li>Enter the short URL that corresponds to your QR code</li>
-						<li>Enter your community's name</li>
+						<li>
+							<label for="setLink">Enter the short URL<sup>3</sup> that corresponds to your QR tag:</label>
+							<input type="text" id="setLink" name="url" placeholder="goo.gl/link" data-target=".badge-link">
+						</li>
+						<li>
+							<label for="setCommname">Enter your community's name:</label>
+							<input type="text" id="setCommname" name="cname" placeholder="COMMUNITY" data-target=".badge-community">
+						</li>
 						<li>Print out this page for your new badge!</li>
 					</ol>
+					<p class="muted">
+						<small>1. 250 x 250 pixels is a good image size to use.</small><br>
+						<small>2. For a good QR tag generator, try <a href="www.unitaglive.com/qrcode">Unitag</a>. Turn off the background color for transparency.</small><br>
+						<small>3. We recommend the <a href="goo.gl">goo.gl</a> URL shortener. You can leave off the <code>http://</code> for brevity.</small>
+					</p>
 				</div>
 			</div>
 
@@ -111,7 +125,7 @@
 						<em>Badger</em> is a customizable identification badge generator for Ingress field agents.
 					</p>
 					<p>
-						Simply follow the instructions above and print out this page. Only the important stuff will be printed. You can then cut out<sup>1</sup> the images and laminate them in an ID badge style laminating pouch<sup>2</sup>. Show your faction pride and support your community!
+						Simply follow the instructions above and print out this page. Only the important stuff will be printed. You can then cut out<sup>4</sup> the images and laminate them in an ID badge style laminating pouch<sup>5</sup>. Show your faction pride and support your community!
 					</p>
 					<p>
 						Once printed and cut-out, the badge should be just the right size to leave room at the top of the laminating pouch that you can punch it out with a slot punch and hang it from a lanyard or badge-clip. Be sure to laminate it in such a way that the extra space is all at the top edge of your badge.
@@ -119,9 +133,9 @@
 					<p>
 						If you don't have the laminate or a laminator, take the cut-out pieces (and maybe a couple extras, just in case) to your nearest full-service copy shop for assistance. They probably sell lanyards and badge-clips as well. If you want to get real fancy, you could even have them print it out on high-quality stock for a more professional look.
 					</p>
-					<p>
-						<small>1. For best results cut inside the dotted lines, leaving approximately 1-2mm on the outside edges.</small><br>
-						<small>2. Designed to fit 57mm x 95mm (2-1/4" x 3-3/4") pouches. Use 5 mil thickness for better durability.</small>
+					<p class="muted">
+						<small>4. For best results cut inside the dotted lines, leaving approximately 1-2mm on the outside edges.</small><br>
+						<small>5. Designed to fit 57mm x 95mm (2-1/4" x 3-3/4") pouches. Use 5 mil thickness for better durability.</small>
 					</p>
 				</div>
 			</div>
@@ -131,11 +145,11 @@
 			<div class="row hidden-print">
 				<div class="span12">
 					<h1 id="contrib">Contribute</h1>
-					<p>If you would like to see additional features added to this project, there are a couple of ways you can get involved:</p>
+					<p>If you would like to contribute to this project, here are some ways you can get involved:</p>
 					<ul>
-						<li>Submit a <a href="https://github.com/therealklanni/badger/issues">feature request</a><sup>3</sup></li>
+						<li>Submit a <a href="https://github.com/therealklanni/badger/issues">feature request</a><sup>6</sup></li>
 						<li>Found a bug? Something not aligning properly? Doesn't print properly? <a href="https://github.com/therealklanni/badger/issues">Report it!</a></li>
-						<li>Fork the project on <a href="https://github.com/therealklanni/badger">GitHub</a> and contribute directly with pull-requests</li>
+						<li>Fork the project on <a href="https://github.com/therealklanni/badger">GitHub</a> and contribute directly :)</li>
 					</ul>
 					<div class="row">
 						<div class="span2 offset1">
@@ -147,7 +161,7 @@
 							<br>
 						</div>
 					</div>
-					<p><small>3. Please label feature requests as an "enhancement" (look for the "add labels" heading).</small></p>
+					<p class="muted"><small>6. Please label feature requests as an "enhancement" (look for the "add labels" heading).</small></p>
 				</div>
 			</div>
 
@@ -157,7 +171,7 @@
 				<div class="span12">
 					<h3>Sponsored by</h3>
 					<!-- Replace the ID below with your G+ Page ID -->
-					<div class="g-plus" data-width="350" data-href="//plus.google.com/108910164412297335014" data-rel="publisher"></div>
+					<div class="g-plus" data-width="310" data-href="//plus.google.com/108910164412297335014" data-rel="publisher"></div>
 				</div>
 			</div>
 
@@ -197,7 +211,7 @@
 			})();
 		</script>
 
-		<script src="scripts/14a54794.main.js"></script>
+		<script src="scripts/5134e081.main.js"></script>
 
 		<script src="scripts/d41d8cd9.coffee.js"></script>
 
