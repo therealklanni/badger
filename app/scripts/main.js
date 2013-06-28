@@ -65,11 +65,17 @@ $('.badge-logo, .badge-qr').on({
 });
 
 $('#userLogo, #userQr').on('change', function(event) {
-	var target = $('.'+ $(this).data('img'))[0],
+	var target = $($(this).data('target'))[0],
 		file = $(this)[0].files[0];
 
 	event.stopPropagation();
 	event.preventDefault();
 
 	displayImage(file, target);
+});
+
+$('#setCodename, #setLink, #setCommname').on('keyup', function(event) {
+	var $target = $($(this).data('target'));
+
+	$target.text($(this).val());
 });
