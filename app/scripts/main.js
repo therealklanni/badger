@@ -1,6 +1,6 @@
-// temporary
 var
 
+// change text and color of level flag
 setLevel = function(lv) {
 	var fillColor = ['#333', '#fece5a', '#ffa630', '#ff7315', '#e40000', '#fd2992', '#eb26cd', '#c124e0', '#9627f4'];
 
@@ -8,6 +8,7 @@ setLevel = function(lv) {
 	$('#badge-flag-svg').find('path').css('fill', fillColor[+lv]);
 },
 
+// handler for displaying dropped or selected images
 displayImage = function(file, targetElement) {
 	var reader = new FileReader();
 
@@ -27,23 +28,7 @@ displayImage = function(file, targetElement) {
 
 ;
 
-$('#setLevel').spinner({
-	stop: function() {
-		setLevel($(this).val());
-	},
-	spin: function(_, ui) {
-		if (ui.value > 8) {
-			$(this).spinner('value', 0);
-
-			return false;
-		} else if (ui.value < 0) {
-			$(this).spinner('value', 8);
-
-			return false;
-		}
-	}
-});
-
+// drag-n-drop event handlers
 $('.badge-logo, .badge-qr').on({
 	dragover: function(event) {
 		event.stopPropagation();
@@ -64,6 +49,7 @@ $('.badge-logo, .badge-qr').on({
 	}
 });
 
+// file input handler
 $('#userLogo, #userQr').on('change', function(event) {
 	var target = $($(this).data('target'))[0],
 		file = $(this)[0].files[0];
@@ -74,7 +60,26 @@ $('#userLogo, #userQr').on('change', function(event) {
 	displayImage(file, target);
 });
 
-$('#setCodename, #setLink, #setCommname').on('keyup', function(event) {
+// level spinner
+$('#setLevel').spinner({
+	stop: function() {
+		setLevel($(this).val());
+	},
+	spin: function(_, ui) {
+		if (ui.value > 8) {
+			$(this).spinner('value', 0);
+
+			return false;
+		} else if (ui.value < 0) {
+			$(this).spinner('value', 8);
+
+			return false;
+		}
+	}
+});
+
+// link inputs with editable elements
+$('#setCodename, #setLink, #setCommname').on('keyup', function() {
 	var $target = $($(this).data('target'));
 
 	$target.text($(this).val());
