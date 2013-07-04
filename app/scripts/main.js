@@ -91,7 +91,7 @@ $('#setLevelFlag').spinner(spinnerOptions);
 $('.badge-flag .ui-spinner').position({
 	my: 'left top-8',
 	at: 'right-8 top',
-	of: $('.badge-level')
+	of: '.badge-level'
 }).hide();
 
 $('.badge-flag').hover(function() {
