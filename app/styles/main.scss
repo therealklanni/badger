@@ -69,6 +69,9 @@ $iconWhiteSpritePath: "../images/glyphicons-halflings-white.png";
 	left: 38.5mm;
 }
 
+.badge-flag .ui-spinner { border: none; background: none; }
+.badge-flag .ui-spinner a { border: 1px solid #dddddd; }
+
 .badge-level {
 	position: absolute;
 	top: 3mm;
@@ -76,6 +79,11 @@ $iconWhiteSpritePath: "../images/glyphicons-halflings-white.png";
 	font-size: 10mm;
 	font-family: Iceland;
 	background-color: transparent !important;
+}
+
+.badge-level-spinner {
+	width: 1px;
+	height: 30px;
 }
 
 .badge-scancode-blank {

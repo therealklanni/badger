@@ -1,5 +1,22 @@
 var
 
+spinnerOptions = {
+	stop: function() {
+		setLevel($(this).val());
+	},
+	spin: function(_, ui) {
+		if (ui.value > 8) {
+			$(this).spinner('value', 0);
+
+			return false;
+		} else if (ui.value < 0) {
+			$(this).spinner('value', 8);
+
+			return false;
+		}
+	}
+},
+
 // change text and color of level flag
 setLevel = function(lv) {
 	var fillColor = ['#333', '#fece5a', '#ffa630', '#ff7315', '#e40000', '#fd2992', '#eb26cd', '#c124e0', '#9627f4'];
@@ -60,27 +77,25 @@ $('#userLogo, #userQr').on('change', function(event) {
 	displayImage(file, target);
 });
 
-// level spinner
-$('#setLevel').spinner({
-	stop: function() {
-		setLevel($(this).val());
-	},
-	spin: function(_, ui) {
-		if (ui.value > 8) {
-			$(this).spinner('value', 0);
-
-			return false;
-		} else if (ui.value < 0) {
-			$(this).spinner('value', 8);
-
-			return false;
-		}
-	}
-});
-
 // link inputs with editable elements
 $('#setCodename, #setLink, #setCommname').on('keyup', function() {
 	var $target = $($(this).data('target'));
 
 	$target.text($(this).val());
+});
+
+// level spinners
+$('#setLevel').spinner(spinnerOptions);
+$('#setLevelFlag').spinner(spinnerOptions);
+
+$('.badge-flag .ui-spinner').position({
+	my: 'left top-8',
+	at: 'right-8 top',
+	of: $('.badge-level')
+}).hide();
+
+$('.badge-flag').hover(function() {
+	$('.badge-flag .ui-spinner').show();
+}, function() {
+	$('.badge-flag .ui-spinner').hide();
 });
