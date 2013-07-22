@@ -12,7 +12,7 @@
 		<!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
 		<link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Economica:700|Iceland" type="text/css">
 		<link rel="stylesheet" href="styles/55be207c.jqueryui.css">
-		<link rel="stylesheet" href="styles/2692a4d6.main.css">
+		<link rel="stylesheet" href="styles/87230875.main.css">
 		<script src="scripts/vendor/f7f27360.modernizr.js"></script>
 		<!-- Replace the ID below with your G+ Page ID -->
 		<link href="https://plus.google.com/108910164412297335014" rel="publisher">
@@ -54,7 +54,8 @@
 				<div class="span4">
 					<h1>Front</h1>
 					<div class="badge-front">
-						<img src="images/31480689.enl-blank-front.png" alt="" class="badge-base">
+						<img src="images/31480689.enl-blank-front.png" alt="" class="enlightened badge-base">
+						<img src="images/1492abf7.res-blank-front.png" alt="" class="resistance badge-base">
 						<img src="images/31a07d21.default-logo.png" alt="" class="editable badge-logo">
 						<span class="editable badge-codename" contenteditable="">CODENAME</span>
 						<div class="badge-flag">
@@ -63,8 +64,7 @@
 									<path style="fill:#333;fill-rule:evenodd;stroke:#333;stroke-width:0px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:0" d="m 6.0363862,0.51025186 7.4707508,0.041935 0,14 -13,0 0,-8.4180287 z" id="rect3007">
 								</g>
 							</svg>
-							<label for="setLevelFlag" class="badge-level lv0">0</label>
-							<input id="setLevelFlag" class="badge-level-spinner" value="0">
+							<span class="badge-level lv0">0</span>
 						</div>
 						<div class="badge-scancode-blank">
 							<div class="badge-scancode-corner"></div>
@@ -75,8 +75,8 @@
 				<div class="badge-back span4">
 					<h1>Back</h1>
 					<div class="badge-back">
-						<img src="images/a1bb196d.enl-blank-back.png" alt="" class="badge-base">
-						<img src="images/efebce32.enl-blank-green.png" alt="" class="badge-green-blank">
+						<img src="images/49556577.enl-blank-back.png" alt="" class="enlightened badge-base">
+						<img src="images/a6968fd6.res-blank-back.png" alt="" class="resistance badge-base">
 						<img src="images/77ee982d.default-qr.png" alt="" class="editable badge-qr">
 						<span class="editable badge-link" contenteditable="">goo.gl/link</span>
 						<span class="editable badge-community" contenteditable="">COMMUNITY</span>
@@ -85,6 +85,13 @@
 				<div class="span4 hidden-print">
 					<h2>Instructions</h2>
 					<ol>
+						<li>
+							<label for="factionRadio">Choose faction:</label>
+							<div id="factionRadio" class="btn-group" data-toggle="buttons-radio">
+								<button id="factionEnlightened" type="button" class="btn active">Enlightened</button>
+								<button id="factionResistance" type="button" class="btn">Resistance</button>
+							</div>
+						</li>
 						<li>
 							<label for="setCodename">Enter your codename:</label>
 							<input type="text" id="setCodename" name="codename" placeholder="CODENAME" data-target=".badge-codename">
@@ -216,7 +223,7 @@
 			})();
 		</script>
 
-		<script src="scripts/d6ca66c9.main.js"></script>
+		<script src="scripts/f9f03a44.main.js"></script>
 
 </body>
 </html>
