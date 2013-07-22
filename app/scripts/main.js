@@ -84,18 +84,21 @@ $('#setCodename, #setLink, #setCommname').on('keyup', function() {
 	$target.text($(this).val());
 });
 
-// level spinners
+// level spinner
 $('#setLevel').spinner(spinnerOptions);
-$('#setLevelFlag').spinner(spinnerOptions);
 
-$('.badge-flag .ui-spinner').position({
-	my: 'left top-8',
-	at: 'right-8 top',
-	of: '.badge-level'
-}).hide();
+$('.badge-flag').on('click', function(event) {
+	$('#setLevel').spinner('stepUp');
+	event.stopPropagation();
+});
 
-$('.badge-flag').hover(function() {
-	$('.badge-flag .ui-spinner').show();
-}, function() {
-	$('.badge-flag .ui-spinner').hide();
+// swap badge blanks on faction change
+$('#factionRadio').button().on('click', function(event) {
+	if (event.toElement.id === "factionEnlightened") {
+		$('.badge-front .badge-base').attr('src', 'images/enl-blank-front.png');
+		$('.badge-back .badge-base').attr('src', 'images/enl-blank-back.png');
+	} else {
+		$('.badge-front .badge-base').attr('src', 'images/res-blank-front.png');
+		$('.badge-back .badge-base').attr('src', 'images/res-blank-back.png');
+	}
 });

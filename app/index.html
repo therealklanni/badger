@@ -78,8 +78,7 @@
 										id="rect3007" />
 								</g>
 							</svg>
-							<label for="setLevelFlag" class="badge-level lv0">0</label>
-							<input id="setLevelFlag" class="badge-level-spinner" value="0">
+							<span class="badge-level lv0">0</span>
 						</div>
 						<div class="badge-scancode-blank">
 							<div class="badge-scancode-corner"></div>
@@ -99,6 +98,13 @@
 				<div class="span4 hidden-print">
 					<h2>Instructions</h2>
 					<ol>
+						<li>
+							<label for="factionRadio">Choose faction:</label>
+							<div id="factionRadio" class="btn-group" data-toggle="buttons-radio">
+								<button id="factionEnlightened" type="button" class="btn active">Enlightened</button>
+								<button id="factionResistance" type="button" class="btn">Resistance</button>
+							</div>
+						</li>
 						<li>
 							<label for="setCodename">Enter your codename:</label>
 							<input type="text" id="setCodename" name="codename" placeholder="CODENAME" data-target=".badge-codename">
@@ -236,6 +242,7 @@
 		<script src="bower_components/jquery/jquery.js"></script>
 		<script src="bower_components/jquery-ui/ui/minified/jquery-ui.min.js"></script>
 		<script src="bower_components/sass-bootstrap/js/bootstrap-collapse.js"></script>
+		<script src="bower_components/sass-bootstrap/js/bootstrap-button.js"></script>
 		<script src="scripts/main.js"></script>
 		<!-- endbuild -->
 
