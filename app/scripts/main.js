@@ -95,10 +95,10 @@ $('.badge-flag').on('click', function(event) {
 // swap badge blanks on faction change
 $('#factionRadio').button().on('click', function(event) {
 	if (event.toElement.id === "factionEnlightened") {
-		$('.badge-front .badge-base').attr('src', 'images/enl-blank-front.png');
-		$('.badge-back .badge-base').attr('src', 'images/enl-blank-back.png');
+		$('.resistance.badge-base').hide();
+		$('.enlightened.badge-base').show();
 	} else {
-		$('.badge-front .badge-base').attr('src', 'images/res-blank-front.png');
-		$('.badge-back .badge-base').attr('src', 'images/res-blank-back.png');
+		$('.resistance.badge-base').show();
+		$('.enlightened.badge-base').hide();
 	}
 });
