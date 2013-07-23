@@ -8,6 +8,7 @@
 # THANKS
 
     "Open Your Mind" Ingress community on Google+
+    Brandon Graham and Nathan Brandt for their help on the badge design.
 
 # TECHNOLOGY COLOPHON
 
