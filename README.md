@@ -65,7 +65,7 @@ Locate and modify the following lines in the `dist/index.html` file as follows
 	var _gaq=[['_setAccount','UA-XXXXX-X'],['_trackPageview']];
 ```
 
-This is where you set your default values
+Finally, set your default values ...
 
 ```html
 <script>
@@ -80,6 +80,10 @@ This is where you set your default values
 	}
 </script>
 ```
+
+and upload everything from the `dist/` folder to your web hosting.
+
+That's it, you're done!
 
 ## Contribute!
 
