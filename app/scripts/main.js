@@ -93,8 +93,8 @@ $('.badge-flag').on('click', function(event) {
 });
 
 // swap badge blanks on faction change
-$('#factionRadio').button().on('click', function(event) {
-	if (event.toElement.id === "factionEnlightened") {
+$('#factionRadio').buttonset().on('click', function(event) {
+	if (event.target.id === "factionEnlightened") {
 		$('.resistance.badge-base').hide();
 		$('.enlightened.badge-base').show();
 	} else {
