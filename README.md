@@ -22,12 +22,12 @@ Replace the `??.default-logo.png` and `??.default-qr.png` images with your own d
 
 ```html
 <!-- Overwrite this image with your own default, or change the src to point to your image location -->
-<img src="images/default-logo.png" alt="" class="editable badge-logo">
+<img src="images/31a07d21.default-logo.png" alt="" class="editable badge-logo">
 
 ...
 
 <!-- Overwrite this image with your own default, or change the src to point to your image location -->
-<img src="images/default-qr.png" alt="" class="editable badge-qr">
+<img src="images/77ee982d.default-qr.png" alt="" class="editable badge-qr">
 ```
 
 Locate and modify the following lines in the `dist/index.html` file as follows
