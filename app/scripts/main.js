@@ -102,3 +102,27 @@ $('#factionRadio').buttonset().on('click', function(event) {
 		$('.enlightened.badge-base').hide();
 	}
 });
+
+// apply community customizations
+
+// do some type/value checks
+community_defaults = typeof community_defaults === 'object' ? community_defaults : {};
+community_defaults.community = typeof community_defaults.community === 'string' ? community_defaults.community : 'COMMUNITY';
+community_defaults.link = typeof community_defaults.link === 'string' ? community_defaults.link : 'goo.gl/link';
+community_defaults.enlightened = typeof community_defaults.enlightened === 'boolean' ? community_defaults.enlightened : true;
+
+// apply the custom community name
+$('.badge-community').text(community_defaults.community);
+$('#setCommname').attr('placeholder', community_defaults.community);
+
+// apply the custom link
+$('.badge-link').text(community_defaults.link);
+$('#setLink').attr('placeholder', community_defaults.link);
+
+// toggle the faction
+if (!community_defaults.enlightened) {
+	$('#factionEnlightened').removeClass('active');
+	$('.enlightened.badge-base').hide();
+	$('#factionResistance').addClass('active');
+	$('.resistance.badge-base').show();
+}
