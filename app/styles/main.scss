@@ -111,6 +111,11 @@ $iconWhiteSpritePath: "../images/glyphicons-halflings-white.png";
 	width: 10px;
 }
 
+.editable {
+	white-space: nowrap;
+	overflow: hidden;
+}
+
 .resistance.badge-base { display: none; }
 .editable:hover { outline: 2px dashed #333; }
 .res { color: #00c2ff; }
