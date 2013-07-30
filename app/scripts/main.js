@@ -81,7 +81,7 @@ $('#userLogo, #userQr').on('change', function(event) {
 $('#setCodename, #setLink, #setCommname').on('keyup', function() {
 	var $target = $($(this).data('target'));
 
-	$target.text($(this).val());
+	$target.text($(this).val().replace('http://',''));
 });
 
 // level spinner
