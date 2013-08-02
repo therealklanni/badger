@@ -1,20 +1,55 @@
 var
 
-spinnerOptions = {
-	stop: function() {
-		setLevel($(this).val());
-	},
-	spin: function(_, ui) {
-		if (ui.value > 8) {
-			$(this).spinner('value', 0);
+// draw front badge design onto canvas
+drawBadgeFront = function(agent) {
+	var blank, logo, scancode, codename, flag, level,
+		canvas = $('#canvas')[0];
 
-			return false;
-		} else if (ui.value < 0) {
-			$(this).spinner('value', 8);
+	paper.setup(canvas);
 
-			return false;
+	with (paper) {
+		blank = new Raster('enl-blank-front', new Point(40, 60));
+		blank.scale(0.42, 0.4075);
+
+		logo = new Raster('badge-logo', new Point(view.center._x, 112));
+		logo.size = new Size(250, 250);
+		logo.scale(0.56);
+
+		scancode = new Raster('badge-scancode', new Point(63, 204));
+		scancode.size = new Size(109, 21);
+
+		codename = new PointText(new Point(view.center._x, 35));
+		codename.content = agent.codename;
+		codename.characterStyle = {
+			fontSize: 20,
+			font: 'Iceland',
+			justification: 'center'
+		};
+
+		flag = new Path({
+			segments: [[149,190], [149,214], [184,214], [184,173], [164,173]]
+		});
+
+		flag.fillColor = ['#333', '#fece5a', '#ffa630', '#ff7315', '#e40000', '#fd2992', '#eb26cd', '#c124e0', '#9627f4'][agent.level]
+
+		level = new PointText(new Point(166,204));
+		level.content = agent.level;
+		level.fillColor = (agent.level > 0 && agent.level < 8) ? '#333' : '#ffa630';
+		level.characterStyle = {
+			fontSize: 40,
+			font: 'Iceland',
+			justification: 'center'
 		}
 	}
+},
+
+// download canvas as an image
+saveImage = function(filename) {
+	var canvas = $('canvas')[0];
+
+	canvas.toBlob(function(blob) {
+		saveAs(blob, filename);
+	});
 },
 
 // change text and color of level flag
@@ -85,7 +120,22 @@ $('#setCodename, #setLink, #setCommname').on('keyup', function() {
 });
 
 // level spinner
-$('#setLevel').spinner(spinnerOptions);
+$('#setLevel').spinner({
+	stop: function() {
+		setLevel($(this).val());
+	},
+	spin: function(_, ui) {
+		if (ui.value > 8) {
+			$(this).spinner('value', 0);
+
+			return false;
+		} else if (ui.value < 0) {
+			$(this).spinner('value', 8);
+
+			return false;
+		}
+	}
+});
 
 $('.badge-flag').on('click', function(event) {
 	$('#setLevel').spinner('stepUp');

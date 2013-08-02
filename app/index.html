@@ -84,11 +84,11 @@
 				<div class="span4">
 					<h1>Front</h1>
 					<div class="badge-front">
-						<img src="images/enl-blank-front.png" alt="" class="enlightened badge-base">
-						<img src="images/res-blank-front.png" alt="" class="hide resistance badge-base">
+						<img id="enl-blank-front" src="images/enl-blank-front.png" alt="" class="enlightened badge-base">
+						<img id="res-blank-front" src="images/res-blank-front.png" alt="" class="hide resistance badge-base">
 
 						<!-- Overwrite this image with your own default, or change the src to point to your image location -->
-						<img src="images/default-logo.png" alt="" class="editable badge-logo">
+						<img id="badge-logo" src="images/default-logo.png" alt="" class="editable badge-logo">
 
 						<span class="editable badge-codename" contenteditable>CODENAME</span>
 						<div class="badge-flag">
@@ -111,7 +111,7 @@
 							<span class="badge-level lv0">0</span>
 						</div>
 						<div class="badge-scancode-blank">
-							<img src="images/default-scancode.png" alt="" class="editable badge-scancode">
+							<img id="badge-scancode" src="images/default-scancode.png" alt="" class="editable badge-scancode">
 						</div>
 					</div>
 				</div>
@@ -255,6 +255,8 @@
 
 		</div>
 
+		<canvas id="canvas" height="302" width="189"></canvas>
+
 		<!--[if lt IE 7]>
 			<p class="chromeframe">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">activate Google Chrome Frame</a> to improve your experience.</p>
 		<![endif]-->
@@ -292,7 +294,9 @@
 		<script src="bower_components/jquery-ui/ui/minified/jquery-ui.min.js"></script>
 		<script src="bower_components/sass-bootstrap/js/bootstrap-collapse.js"></script>
 		<script src="bower_components/sass-bootstrap/js/bootstrap-button.js"></script>
-		<script src="bower_components/sass-bootstrap/js/bootstrap-alert.js"></script>
+		<script src="bower_components/paper/dist/paper-core.js"></script>
+		<script src="scripts/canvastoblob.js"></script>
+		<script src="scripts/filesaver.js"></script>
 		<script src="scripts/main.js"></script>
 		<script src="scripts/plus.js"></script>
 		<!-- endbuild -->
