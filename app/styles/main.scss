@@ -116,6 +116,10 @@ $iconWhiteSpritePath: "../images/glyphicons-halflings-white.png";
 	overflow: hidden;
 }
 
+.action-buttons {
+	padding: 20px 12px;
+}
+
 p.small { margin-bottom: 2px; }
 .editable:hover { outline: 2px dashed #333; }
 .res { color: #00c2ff; }
