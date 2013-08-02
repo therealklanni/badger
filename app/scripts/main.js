@@ -1,5 +1,11 @@
 var
 
+agent = {
+	codename: 'CODENAME',
+	level: 0,
+	enlightened: true
+},
+
 // draw front badge design onto canvas
 drawBadgeFront = function(agent) {
 	var blank, logo, scancode, codename, flag, level,
@@ -58,6 +64,8 @@ setLevel = function(lv) {
 
 	$('.badge-level').removeClass('lv0 lv1 lv2 lv3 lv4 lv5 lv6 lv7 lv8').addClass('lv'+ lv).text(lv);
 	$('#badge-flag-svg').find('path').css('fill', fillColor[+lv]);
+
+	return lv;
 },
 
 // handler for displaying dropped or selected images
@@ -79,6 +87,18 @@ displayImage = function(file, targetElement) {
 }
 
 ;
+
+// save button
+$('button.save').on('click', function(event) {
+	if ($(event.currentTarget).hasClass('front')) {
+		agent.filename = 'Badger - '+ agent.codename +'.png';
+
+		drawBadgeFront(agent);
+	} else {
+		// TODO
+		// drawBadgeBack();
+	}
+})
 
 // drag-n-drop event handlers
 $('.badge-logo, .badge-qr').on({
@@ -116,13 +136,13 @@ $('#userLogo, #userQr').on('change', function(event) {
 $('#setCodename, #setLink, #setCommname').on('keyup', function() {
 	var $target = $($(this).data('target'));
 
-	$target.text($(this).val());
+	agent.codename = $target.text($(this).val()).text();
 });
 
 // level spinner
 $('#setLevel').spinner({
 	stop: function() {
-		setLevel($(this).val());
+		agent.level = setLevel($(this).val());
 	},
 	spin: function(_, ui) {
 		if (ui.value > 8) {
@@ -144,7 +164,9 @@ $('.badge-flag').on('click', function(event) {
 
 // swap badge blanks on faction change
 $('#factionRadio').buttonset().on('click', function(event) {
-	if (event.target.id === "factionEnlightened") {
+	agent.enlightened = (event.target.id === 'factionEnlightened');
+
+	if (event.target.id === 'factionEnlightened') {
 		$('.resistance.badge-base').hide();
 		$('.enlightened.badge-base').show();
 	} else {
