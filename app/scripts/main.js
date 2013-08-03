@@ -136,7 +136,7 @@ $('#userLogo, #userQr').on('change', function(event) {
 });
 
 // link inputs with editable elements
-$('#setCodename, #setLink, #setCommname').on('keyup', function() {
+$('#setCodename, #setLink, #setCommname').on('keyup change', function() {
 	var $target = $($(this).data('target')),
 		target = $(this).data('target').replace('.badge-', '');
 

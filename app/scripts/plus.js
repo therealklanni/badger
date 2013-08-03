@@ -7,7 +7,7 @@
 
 var signinCallback = function(authResult) {
 	if (authResult.access_token) {
-		$('.signin').hide();
+		$('.signin').fadeOut();
 
 		// Initialize gShare button
 		// gapi.interactivepost.render('badger-share', {
@@ -26,7 +26,7 @@ var signinCallback = function(authResult) {
 			beforeSend: function(xhr) { xhr.setRequestHeader('Authorization','Bearer ' + authResult.access_token); }
 		}).done(function(person) {
 			if (person.nickname) {
-				$('.badge-codename').text(person.nickname);
+				$('#setCodename').val(person.nickname).trigger('change');
 			}
 		});
 	} else if (authResult.error) {
