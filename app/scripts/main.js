@@ -6,6 +6,9 @@ agent = {
 	enlightened: true
 },
 
+// TODO when any value is changed draw the badge
+// TODO set save button to call saveImage
+
 // draw front badge design onto canvas
 drawBadgeFront = function(agent) {
 	var blank, logo, scancode, codename, flag, level,
@@ -75,6 +78,11 @@ displayImage = function(file, targetElement) {
 	if (file.type.match('image.*')) {
 		reader.onload = (function() {
 			return function(e) {
+				targetElement.onload = function() {
+					// update the generated image
+					drawBadgeFront(agent);
+				}
+
 				targetElement.src = e.target.result;
 			}
 		})(file);
@@ -90,15 +98,10 @@ displayImage = function(file, targetElement) {
 
 // save button
 $('button.save').on('click', function(event) {
-	if ($(event.currentTarget).hasClass('front')) {
-		agent.filename = 'Badger - '+ agent.codename +'.png';
+	agent.filename = 'Badger - '+ agent.codename +'.png';
 
-		drawBadgeFront(agent);
-	} else {
-		// TODO
-		// drawBadgeBack();
-	}
-})
+	saveImage();
+});
 
 // drag-n-drop event handlers
 $('.badge-logo, .badge-qr').on({
@@ -134,15 +137,20 @@ $('#userLogo, #userQr').on('change', function(event) {
 
 // link inputs with editable elements
 $('#setCodename, #setLink, #setCommname').on('keyup', function() {
-	var $target = $($(this).data('target'));
+	var $target = $($(this).data('target')),
+		target = $(this).data('target').replace('.badge-', '');
 
-	agent.codename = $target.text($(this).val()).text();
+	agent[target] = $target.text($(this).val()).text();
+
+	drawBadgeFront(agent);
 });
 
 // level spinner
 $('#setLevel').spinner({
 	stop: function() {
 		agent.level = setLevel($(this).val());
+
+		drawBadgeFront(agent);
 	},
 	spin: function(_, ui) {
 		if (ui.value > 8) {
@@ -173,6 +181,8 @@ $('#factionRadio').buttonset().on('click', function(event) {
 		$('.resistance.badge-base').show();
 		$('.enlightened.badge-base').hide();
 	}
+
+	setTimeout(function() { drawBadgeFront(agent); }, 100);
 });
 
 // apply community customizations
