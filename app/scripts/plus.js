@@ -26,7 +26,7 @@ var signinCallback = function(authResult) {
 			beforeSend: function(xhr) { xhr.setRequestHeader('Authorization','Bearer ' + authResult.access_token); }
 		}).done(function(person) {
 			if (person.nickname) {
-				$('#setCodename').val(person.nickname).trigger('change');
+				$('#setCodename').val(person.nickname).trigger('change').focus();
 			}
 		});
 	} else if (authResult.error) {
