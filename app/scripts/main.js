@@ -145,6 +145,17 @@ $('#setCodename, #setLink, #setCommname').on('keyup change', function() {
 	drawBadgeFront(agent);
 });
 
+// link editable elements with inputs
+$('.badge-codename, .badge-link, .badge-community').on('keyup change', function() {
+	var classes = $(this)[0].className,
+		target = classes.slice(classes.indexOf('badge')).split('-')[1],
+		$target = $('#set'+ target[0].toUpperCase() + target.slice(1));
+
+	agent[target] = $target.val($(this).text().replace('http://', '')).val();
+
+	drawBadgeFront(agent);
+});
+
 // level spinner
 $('#setLevel').spinner({
 	stop: function() {
