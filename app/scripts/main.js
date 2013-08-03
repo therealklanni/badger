@@ -14,17 +14,17 @@ drawBadgeFront = function(agent) {
 	paper.setup(canvas);
 
 	with (paper) {
-		blank = new Raster('enl-blank-front', new Point(40, 60));
-		blank.scale(0.42, 0.4075);
+		blank = new Raster('enl-blank-front', new Point(39, 61));
+		blank.scale(0.419, 0.402);
 
-		logo = new Raster('badge-logo', new Point(view.center._x, 112));
+		logo = new Raster('badge-logo', new Point(view.center._x, 113));
 		logo.size = new Size(250, 250);
-		logo.scale(0.56);
+		logo.scale(0.545);
 
-		scancode = new Raster('badge-scancode', new Point(63, 204));
+		scancode = new Raster('badge-scancode', new Point(63, 203));
 		scancode.size = new Size(109, 21);
 
-		codename = new PointText(new Point(view.center._x, 35));
+		codename = new PointText(new Point(view.center._x, 38));
 		codename.content = agent.codename;
 		codename.characterStyle = {
 			fontSize: 20,
