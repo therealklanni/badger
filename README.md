@@ -89,6 +89,8 @@ That's it, you're done!
 
 Merge requests are encouraged and appreciated!
 
+You can also help out by testing the develop branch and report any bugs you find.
+
 ## Brought to you by
 
 **[Open Your Mind](http://goo.gl/ResXD)** - Phoenix, Arizona's Enlightened, opening minds in the valley since 2012!
