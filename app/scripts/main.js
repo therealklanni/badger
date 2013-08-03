@@ -14,7 +14,7 @@ drawBadgeFront = function(agent) {
 	paper.setup(canvas);
 
 	with (paper) {
-		blank = new Raster('enl-blank-front', new Point(39, 61));
+		blank = new Raster((agent.enlightened ? 'enl' : 'res') + '-blank-front', new Point(39, 61));
 		blank.scale(0.419, 0.402);
 
 		logo = new Raster('badge-logo', new Point(view.center._x, 113));

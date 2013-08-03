@@ -4,12 +4,10 @@ $iconWhiteSpritePath: "../images/glyphicons-halflings-white.png";
 @import 'sass-bootstrap/lib/bootstrap';
 @import 'sass-bootstrap/lib/responsive';
 
-.badge-front {
+.badge-front, .badge-back {
 	position: relative;
-}
-
-.badge-back {
-	position: relative;
+	width: 188px;
+	z-index: 100;
 }
 
 .badge-base {
@@ -24,6 +22,18 @@ $iconWhiteSpritePath: "../images/glyphicons-halflings-white.png";
 	position: absolute;
 	top: 12mm;
 	left: 7mm;
+}
+
+.badge-front.canvas {
+	position: absolute;
+}
+
+canvas {
+	position: absolute;
+	left: -1px;
+	top: -1px;
+	border: 1px dashed #333;
+	// left: -99999px;
 }
 
 .badge-codename {
@@ -138,4 +148,3 @@ p.small { margin-bottom: 2px; }
 .nudge-down10 { margin-top: 10px !important; }
 .footer { margin-top: 40px; }
 .footer p { text-align: center; margin: 0; }
-#canvas { position: absolute; left: -99999px; }
