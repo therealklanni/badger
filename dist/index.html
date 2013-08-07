@@ -8,18 +8,17 @@
 		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 		<title>Badger - Ingress Community Badge Creator</title>
 		<meta itemprop="name" content="Badger - Ingress Community Badge Creator">
-		<meta itemprop="description" content="A simple app for creating and printing out custom Ingress Agent identification badges. Set your codename and level, add your community logo and a QR code (e.g. a link to your community for recruitment), then print the page out and laminate it.">
-		<meta name="description" content="A simple app for creating and printing out custom Ingress Agent identification badges. Set your codename and level, add your community logo and a QR code (e.g. a link to your community for recruitment), then print the page out and laminate it.">
 		<meta itemprop="image" content="http://therealklanni.github.io/badger/images/879f735d.example.png">
+		<meta name="description" content="A simple app for creating and printing out custom Ingress Agent identification badges. Set your codename and level, add your community logo and a QR code (e.g. a link to your community for recruitment), then print the page out and laminate it.">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
 		<link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Economica:700|Iceland" type="text/css">
 		<link rel="stylesheet" href="styles/55be207c.jqueryui.css">
-		<link rel="stylesheet" href="styles/cb429d91.main.css">
+		<link rel="stylesheet" href="styles/eb3e4053.main.css">
 		<script src="scripts/vendor/f7f27360.modernizr.js"></script>
 
 		<!-- Replace the ID (numbers) below with your G+ Page ID, do not use your community ID -->
-		<link href="https://plus.google.com/108910164412297335014" rel="publisher">
+		<link href="https://plus.google.com/102582114610029117496" rel="publisher">
 
 	</head>
 	<body>
@@ -57,17 +56,34 @@
 				</div>
 			</div>
 
-			<br>
+			<div class="signin row">
+				<div class="span3">
+					<span id="signinButton">
+						<span class="g-signin" data-width="wide" data-callback="signinCallback" data-clientid="679488287242.apps.googleusercontent.com" data-cookiepolicy="single_host_origin" data-requestvisibleactions="http://schemas.google.com/AddActivity http://schemas.google.com/CreateActivity" data-scope="https://www.googleapis.com/auth/plus.login">
+						</span>
+					</span>
+				</div>
+
+				<div class="span9">
+					<p>
+						<span class="label label-info">Psst!</span>
+						By signing in with your Google+ account, you get access to additional features!
+					</p>
+				</div>
+			</div>
 
 			<div class="row">
 				<div class="span4">
 					<h1>Front</h1>
+					<div class="badge-front canvas">
+						<canvas id="canvas" height="302" width="188"></canvas>
+					</div>
 					<div class="badge-front">
-						<img src="images/46a4213c.enl-blank-front.png" alt="" class="enlightened badge-base">
-						<img src="images/49760551.res-blank-front.png" alt="" class="hide resistance badge-base">
+						<img id="enl-blank-front" src="images/46a4213c.enl-blank-front.png" alt="" class="enlightened badge-base">
+						<img id="res-blank-front" src="images/49760551.res-blank-front.png" alt="" class="hide resistance badge-base">
 
 						<!-- Overwrite this image with your own default, or change the src to point to your image location -->
-						<img src="images/31a07d21.default-logo.png" alt="" class="editable badge-logo">
+						<img id="badge-logo" src="images/31a07d21.default-logo.png" alt="" class="editable badge-logo">
 
 						<span class="editable badge-codename" contenteditable="">CODENAME</span>
 						<div class="badge-flag">
@@ -79,7 +95,16 @@
 							<span class="badge-level lv0">0</span>
 						</div>
 						<div class="badge-scancode-blank">
-							<img src="images/3c825610.default-scancode.png" alt="" class="editable badge-scancode">
+							<img id="badge-scancode" src="images/3c825610.default-scancode.png" alt="" class="editable badge-scancode">
+						</div>
+					</div>
+
+					<div class="row hidden-print">
+						<div class="span4">
+							<div class="action-buttons">
+								<button class="btn save front"><span class="icon-download"></span> Save</button>
+								<button class="btn share front hide"><span class="icon-share"></span> Share</button>
+							</div>
 						</div>
 					</div>
 				</div>
@@ -221,7 +246,7 @@
 
 		</div>
 
-		<!--[if lt IE 7]>
+		<!--[if lt IE 10]>
 			<p class="chromeframe">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">activate Google Chrome Frame</a> to improve your experience.</p>
 		<![endif]-->
 
@@ -253,7 +278,7 @@
 			}
 		</script>
 
-		<script src="scripts/6ff56076.main.js"></script>
+		<script src="scripts/3bb5a7e4.main.js"></script>
 
 </body>
 </html>
