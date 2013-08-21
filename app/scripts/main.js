@@ -141,6 +141,7 @@ $('#setCodename, #setLink, #setCommname').on('keyup change', function() {
 		target = $(this).data('target').replace('.badge-', '');
 
 	agent[target] = $target.text($(this).val().replace('http://','')).text();
+	agent[target] = $target.text($(this).val().replace('www.','')).text();
 
 	drawBadgeFront(agent);
 });
@@ -152,6 +153,7 @@ $('.badge-codename, .badge-link, .badge-community').on('keyup change', function(
 		$target = $('#set'+ target[0].toUpperCase() + target.slice(1));
 
 	agent[target] = $target.val($(this).text().replace('http://', '')).val();
+	agent[target] = $target.val($(this).text().replace('www.', '')).val();
 
 	drawBadgeFront(agent);
 });
