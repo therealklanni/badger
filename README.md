@@ -91,6 +91,16 @@ Merge requests are encouraged and appreciated!
 
 You can also help out by testing the develop branch and report any bugs you find.
 
+In the directory where you have cloned this repository, run
+
+`npm install && bower install`
+
+to get started. Please work in `develop` and make changes only in the `app` directory.
+
+Use `grunt server` to test your work.
+
+Please only submit pull requests to the `develop` branch. I will do the builds in master after merging from develop.
+
 ## Brought to you by
 
 **[Open Your Mind](http://goo.gl/ResXD)** - Phoenix, Arizona's Enlightened, opening minds in the valley since 2012!
