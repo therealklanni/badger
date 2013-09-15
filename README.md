@@ -87,9 +87,11 @@ That's it, you're done!
 
 ## Contribute!
 
-Merge requests are encouraged and appreciated!
+**Merge requests are encouraged and appreciated!**
 
 You can also help out by testing the develop branch and report any bugs you find.
+
+### Getting started
 
 In the directory where you have cloned this repository, run
 
