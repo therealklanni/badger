@@ -141,7 +141,8 @@ $('#setCodename, #setLink, #setCommname').on('keyup change', function() {
 		target = $(this).data('target').replace('.badge-', '');
 
 	agent[target] = $target.text($(this).val().replace('http://','')).text();
-    	agent[target] = $target.text($(this).val().replace('www.','')).text();
+    agent[target] = $target.text($(this).val().replace('www.','')).text();
+
 	drawBadgeFront(agent);
 });
 
