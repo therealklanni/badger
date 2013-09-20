@@ -70,7 +70,49 @@ var text2 = new PointText({
 });
 }
 </script>
+<script type="text/paperscript" canvas="canvas-back">
+var canvas = document.getElementById("canvas-back");
+var context = canvas.getContext("2d");
 
+context.scale( 0.41 , 0.41 );
+drawMyWeirdShape();
+function drawMyWeirdShape() {
+var path = new Path({
+	segments: [[20, 20], [387, 20], [430, 64], [430, 520], [20, 520]],
+	fillColor: 'red',
+	closed: true
+});
+var path2 = new Path({
+	segments: [[20, 540], [430, 540], [430, 630], [20, 630]],
+	fillColor: 'red',
+	closed: true
+});
+var path3 = new Path({
+	segments: [[20, 650], [430, 650], [430, 700], [170, 700], [150, 720], [20, 720]],
+	fillColor: 'red',
+	closed: true
+});
+
+var text = new PointText({
+	point: [40, 715],
+	content: 'MEMBER',
+	fillColor: 'black',
+	fontSize: 16
+});
+var text2 = new PointText({
+	point: [175, 720],
+	content: 'OYM-042/Operation Level',
+	fillColor: 'black',
+	fontSize: 16
+});
+var text2 = new PointText({
+	point: [50, 685],
+	content: 'INGRESS COMMUNITY OPS',
+	fillColor: 'black',
+	fontSize: 26
+});
+}
+</script>
 		<div class="container">
 
 			<div class="navbar hidden-print">
@@ -174,11 +216,10 @@ var text2 = new PointText({
 					</div>
 				</div>
 				<div class="badge-back span4">
-					<h1>Back</h1>
+					<div class="badge-back canvas">
+                        			<canvas id="canvas-back" height="302" width="188"></canvas>
+					</div>
 					<div class="badge-back">
-						<img src="images/enl-blank-back.png" alt="" class="enlightened badge-base">
-						<img src="images/res-blank-back.png" alt="" class="hide resistance badge-base">
-
 						<!-- Overwrite this image with your own default, or change the src to point to your image location -->
 						<img src="images/default-qr.png" alt="" class="editable badge-qr">
 
