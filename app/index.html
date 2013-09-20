@@ -20,12 +20,56 @@
 		<!-- build:js scripts/vendor/modernizr.js -->
 		<script src="bower_components/modernizr/modernizr.js"></script>
 		<!-- endbuild -->
+		<script src="script/paper.js"></script> <!-- insert paper.js file -->
 
 		<!-- Replace the ID (numbers) below with your G+ Page ID, do not use your community ID -->
 		<link href="https://plus.google.com/102582114610029117496" rel="publisher">
 
 	</head>
 	<body>
+	<script type="text/paperscript" canvas="canvas-front">
+var canvas = document.getElementById("canvas-front");
+var context = canvas.getContext("2d");
+
+context.scale( 0.41 , 0.41 );
+drawMyWeirdShape();
+function drawMyWeirdShape() {
+var path = new Path({
+	segments: [[64, 20], [20, 62], [20, 520], [430, 520], [430, 20]],
+	fillColor: 'red',
+	closed: true
+});
+var path2 = new Path({
+	segments: [[140, 540], [430, 540], [430, 630], [140, 630]],
+	fillColor: 'red',
+	closed: true
+});
+var path3 = new Path({
+	segments: [[20, 650], [430, 650], [430, 720], [340, 720], [320, 700], [20, 700]],
+	fillColor: 'red',
+	closed: true
+});
+
+var text = new PointText({
+	point: [345, 715],
+	content: 'MEMBER',
+	fillColor: 'black',
+	fontSize: 16
+});
+var text2 = new PointText({
+	point: [40, 720],
+	content: 'OYM-042/Operation Level',
+	fillColor: 'black',
+	fontSize: 16
+});
+var text2 = new PointText({
+	point: [50, 685],
+	content: 'INGRESS COMMUNITY OPS',
+	fillColor: 'black',
+	fontSize: 26
+});
+}
+</script>
 
 		<div class="container">
 
@@ -86,12 +130,12 @@
 				<div class="span4">
 					<h1>Front</h1>
 					<div class="badge-front canvas">
-						<canvas id="canvas" height="302" width="188"></canvas>
+						<canvas id="canvas-front" height="302" width="188"></canvas>
 					</div>
 					<div class="badge-front">
-						<img id="enl-blank-front" src="images/enl-blank-front.png" alt="" class="enlightened badge-base">
-						<img id="res-blank-front" src="images/res-blank-front.png" alt="" class="hide resistance badge-base">
-
+						
+						<!-- Was JPG for original background -->
+						
 						<!-- Overwrite this image with your own default, or change the src to point to your image location -->
 						<img id="badge-logo" src="images/default-logo.png" alt="" class="editable badge-logo">
 
