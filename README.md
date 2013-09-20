@@ -106,3 +106,17 @@ Please only submit pull requests to the `develop` branch. I will do the builds i
 ## Brought to you by
 
 **[Open Your Mind](http://goo.gl/ResXD)** - Phoenix, Arizona's Enlightened, opening minds in the valley since 2012!
+
+## Authors
+
+* Kevin Lanni ([@therealklanni](http://github.com/therealklanni))
+
+Special thanks for assistance and contributions:
+
+[Brandon Graham](https://plus.google.com/u/0/106362086604476183109), [Nathan Brandt](https://plus.google.com/u/0/111026822348045714976), [@akkatracker](https://github.com/akkatracker), [@Neofyt](https://github.com/Neofyt), [@stillru](https://github.com/stillru)
+
+## License
+
+Copyright (C) 2013 Kevin Lanni
+
+Licensed under the MIT License
