@@ -1,5 +1,7 @@
 var
 
+urlStrip = /(https?:\/\/)?(www\.)?/g,
+
 agent = {
 	codename: 'CODENAME',
 	level: 0,
@@ -140,8 +142,7 @@ $('#setCodename, #setLink, #setCommname').on('keyup change', function() {
 	var $target = $($(this).data('target')),
 		target = $(this).data('target').replace('.badge-', '');
 
-	agent[target] = $target.text($(this).val().replace('http://','')).text();
-    	agent[target] = $target.text($(this).val().replace('www.','')).text();
+	agent[target] = $target.text($(this).val().replace(urlStrip,'')).text();
 
 	drawBadgeFront(agent);
 });
@@ -152,8 +153,7 @@ $('.badge-codename, .badge-link, .badge-community').on('keyup change', function(
 		target = classes.slice(classes.indexOf('badge')).split('-')[1],
 		$target = $('#set'+ target[0].toUpperCase() + target.slice(1));
 
-	agent[target] = $target.val($(this).text().replace('http://', '')).val();
-	agent[target] = $target.val($(this).text().replace('www.', '')).val();
+	agent[target] = $target.val($(this).text().replace(urlStrip, '')).val();
 
 	drawBadgeFront(agent);
 });
