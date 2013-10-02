@@ -2,7 +2,7 @@ var
 
 agent = {
 	codename: 'CODENAME',
-	level: 0,
+	level: 1,
 	enlightened: true
 },
 
@@ -43,7 +43,7 @@ drawBadgeFront = function(agent) {
 
 		level = new PointText(new Point(166,204));
 		level.content = agent.level;
-		level.fillColor = (agent.level > 0 && agent.level < 8) ? '#333' : '#ffa630';
+		level.fillColor = (agent.level > 1 && agent.level < 8) ? '#333' : '#ffa630';
 		level.characterStyle = {
 			fontSize: 40,
 			font: 'Iceland',
@@ -65,7 +65,7 @@ saveImage = function(filename) {
 setLevel = function(lv) {
 	var fillColor = ['#333', '#fece5a', '#ffa630', '#ff7315', '#e40000', '#fd2992', '#eb26cd', '#c124e0', '#9627f4'];
 
-	$('.badge-level').removeClass('lv0 lv1 lv2 lv3 lv4 lv5 lv6 lv7 lv8').addClass('lv'+ lv).text(lv);
+	$('.badge-level').removeClass('lv1 lv2 lv3 lv4 lv5 lv6 lv7 lv8').addClass('lv'+ lv).text(lv);
 	$('#badge-flag-svg').find('path').css('fill', fillColor[+lv]);
 
 	return lv;
@@ -167,10 +167,10 @@ $('#setLevel').spinner({
 	},
 	spin: function(_, ui) {
 		if (ui.value > 8) {
-			$(this).spinner('value', 0);
+			$(this).spinner('value', 1);
 
 			return false;
-		} else if (ui.value < 0) {
+		} else if (ui.value < 1) {
 			$(this).spinner('value', 8);
 
 			return false;
