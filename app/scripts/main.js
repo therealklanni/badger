@@ -1,3 +1,4 @@
+(function() {
 var
 
 urlStrip = /(https?:\/\/)?(www\.)?/g,
@@ -221,3 +222,5 @@ if (!community_defaults.enlightened) {
 	$('#factionResistance').addClass('active');
 	$('.resistance.badge-base').show();
 }
+
+})();
