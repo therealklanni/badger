@@ -10,7 +10,6 @@ agent = {
 },
 
 // TODO when any value is changed draw the badge
-// TODO set save button to call saveImage
 
 // draw front badge design onto canvas
 drawBadgeFront = function(agent) {
