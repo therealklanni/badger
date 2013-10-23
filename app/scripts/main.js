@@ -1,3 +1,4 @@
+(function() {
 var
 
 urlStrip = /(https?:\/\/)?(www\.)?/g,
@@ -9,7 +10,6 @@ agent = {
 },
 
 // TODO when any value is changed draw the badge
-// TODO set save button to call saveImage
 
 // draw front badge design onto canvas
 drawBadgeFront = function(agent) {
@@ -138,22 +138,32 @@ $('#userLogo, #userQr').on('change', function(event) {
 });
 
 // link inputs with editable elements
-$('#setCodename, #setLink, #setCommname').on('keyup change', function() {
+$('#setCodename, #setLink, #setCommname').on('blur change', function() {
 	var $target = $($(this).data('target')),
-		target = $(this).data('target').replace('.badge-', '');
+		target = $(this).data('target').replace('.badge-', ''),
+		text = $(this).val().replace(urlStrip, '');
 
-	agent[target] = $target.text($(this).val().replace(urlStrip,'')).text();
+	// update own text
+	$(this).val(text);
+
+	// update linked element's text
+	agent[target] = $target.text(text).text();
 
 	drawBadgeFront(agent);
 });
 
 // link editable elements with inputs
-$('.badge-codename, .badge-link, .badge-community').on('keyup change', function() {
+$('.badge-codename, .badge-link, .badge-community').on('blur change', function() {
 	var classes = $(this)[0].className,
 		target = classes.slice(classes.indexOf('badge')).split('-')[1],
-		$target = $('#set'+ target[0].toUpperCase() + target.slice(1));
+		$target = $('#set'+ target[0].toUpperCase() + target.slice(1)),
+		text = $(this).text().replace(urlStrip, '');
 
-	agent[target] = $target.val($(this).text().replace(urlStrip, '')).val();
+	// update own text
+	$(this).text(text);
+
+	// update linked input's text
+	agent[target] = $target.val(text).val();
 
 	drawBadgeFront(agent);
 });
@@ -221,3 +231,5 @@ if (!community_defaults.enlightened) {
 	$('#factionResistance').addClass('active');
 	$('.resistance.badge-base').show();
 }
+
+})();
