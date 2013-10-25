@@ -4,6 +4,25 @@ $iconWhiteSpritePath: "../images/glyphicons-halflings-white.png";
 @import 'sass-bootstrap/lib/bootstrap';
 @import 'sass-bootstrap/lib/responsive';
 
+$lv0: #333;
+$lv1: #fece5a;
+$lv2: #ffa630;
+$lv3: #ff7315;
+$lv4: #e40000;
+$lv5: #fd2992;
+$lv6: #eb26cd;
+$lv7: #c124e0;
+$lv8: #9627f4;
+$res: #00c2ff;
+$enl: #28f428;
+$neu: #f9f9f9;
+
+@mixin badge-level($color) {
+  background-color: $color;
+  border-color: $color;
+  color: $lv0
+}
+
 .badge-front, .badge-back {
 	position: relative;
 	width: 188px;
@@ -129,19 +148,19 @@ canvas {
 }
 
 p.small { margin-bottom: 2px; }
-.editable:hover { outline: 2px dashed #333; }
-.res { color: #00c2ff; }
-.enl { color: #28f428; }
-.neu { color: #f9f9f9; }
-.lv0 { background-color: #333; border-color: #333; color: orange !important; }
-.lv1 { background-color: #fece5a; border-color: #fece5a; color: #333; }
-.lv2 { background-color: #ffa630; border-color: #ffa630; color: #333; }
-.lv3 { background-color: #ff7315; border-color: #ff7315; color: #333; }
-.lv4 { background-color: #e40000; border-color: #e40000; color: #333; }
-.lv5 { background-color: #fd2992; border-color: #fd2992; color: #333; }
-.lv6 { background-color: #eb26cd; border-color: #eb26cd; color: #333; }
-.lv7 { background-color: #c124e0; border-color: #c124e0; color: #333; }
-.lv8 { background-color: #9627f4; border-color: #9627f4; color: orange !important; }
+.editable:hover { outline: 2px dashed $lv0; }
+.res { color: $res; }
+.enl { color: $enl; }
+.neu { color: $neu; }
+.lv0 { @include badge-level($lv0); color: orange; }
+.lv1 { @include badge-level($lv1); }
+.lv2 { @include badge-level($lv2); }
+.lv3 { @include badge-level($lv3); }
+.lv4 { @include badge-level($lv4); }
+.lv5 { @include badge-level($lv5); }
+.lv6 { @include badge-level($lv6); }
+.lv7 { @include badge-level($lv7); }
+.lv8 { @include badge-level($lv8); color: orange; }
 .nudge-down8 { margin-top: 8px !important; }
 .nudge-down10 { margin-top: 10px !important; }
 
