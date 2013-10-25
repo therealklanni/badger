@@ -68,10 +68,14 @@ canvas {
 	width: 10mm;
 	top: 45.1mm;
 	left: 38.5mm;
-}
 
-.badge-flag .ui-spinner { border: none; background: none; }
-.badge-flag .ui-spinner a { border: 1px solid #dddddd; }
+  .ui-spinner {
+    border: none;
+    background: none;
+
+    a { border: 1px solid #dddddd; }
+  }
+}
 
 .badge-level {
 	position: absolute;
