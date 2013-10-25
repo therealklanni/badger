@@ -32,7 +32,7 @@ $neu: #f9f9f9;
 .badge-base {
 	width: 50mm;
 	height: 80mm;
-	outline: 1px dashed #333;
+	outline: 1px dashed $lv0;
 }
 
 .badge-logo, .badge-qr {
@@ -51,7 +51,7 @@ canvas {
 	position: absolute;
 	left: -1px;
 	top: -1px;
-	border: 1px dashed #333;
+	border: 1px dashed $lv0;
 }
 
 .badge-codename {
@@ -60,7 +60,7 @@ canvas {
 	font-size: 20px;
 	font-weight: bold;
 	font-family: Iceland;
-	color: #333;
+	color: $lv0;
 	position: absolute;
 	top: 6mm;
 	left: 3mm;
@@ -131,7 +131,7 @@ canvas {
 	font-weight: bold;
 	font-family: Iceland;
 	font-size: 12px;
-	color: #333;
+	color: $lv0;
 }
 
 #setLevel {
