@@ -1,3 +1,6 @@
+// jshint -W085
+/* global community_defaults:true, paper, Raster, Point, view, Size, PointText, Point, Path, saveAs */
+
 (function() {
 var
 
@@ -41,7 +44,7 @@ drawBadgeFront = function(agent) {
 			segments: [[149,190], [149,214], [184,214], [184,173], [164,173]]
 		});
 
-		flag.fillColor = ['#333', '#fece5a', '#ffa630', '#ff7315', '#e40000', '#fd2992', '#eb26cd', '#c124e0', '#9627f4'][agent.level]
+		flag.fillColor = ['#333', '#fece5a', '#ffa630', '#ff7315', '#e40000', '#fd2992', '#eb26cd', '#c124e0', '#9627f4'][agent.level];
 
 		level = new PointText(new Point(166,204));
 		level.content = agent.level;
@@ -50,7 +53,7 @@ drawBadgeFront = function(agent) {
 			fontSize: 40,
 			font: 'Iceland',
 			justification: 'center'
-		}
+		};
 	}
 },
 
@@ -83,10 +86,10 @@ displayImage = function(file, targetElement) {
 				targetElement.onload = function() {
 					// update the generated image
 					drawBadgeFront(agent);
-				}
+				};
 
 				targetElement.src = e.target.result;
-			}
+			};
 		})(file);
 
 		reader.readAsDataURL(file);
@@ -99,7 +102,7 @@ displayImage = function(file, targetElement) {
 ;
 
 // save button
-$('button.save').on('click', function(event) {
+$('button.save').on('click', function() {
 	agent.filename = 'Badger - '+ agent.codename +'.png';
 
 	saveImage();
@@ -116,8 +119,7 @@ $('.badge-logo, .badge-qr').on({
 		event.preventDefault();
 	},
 	drop: function(event) {
-		var reader = new FileReader(),
-			file = event.originalEvent.dataTransfer.files[0];
+		var file = event.originalEvent.dataTransfer.files[0];
 
 		event.stopPropagation();
 		event.preventDefault();

@@ -1,5 +1,7 @@
 # Badger
 
+![Build Status](https://travis-ci.org/therealklanni/badger.png?branch=master)
+
 A simple app for creating and printing out custom **[Ingress](http://ingress.com) Agent identification badges**. An end-user can set their codename and level, add a community logo, and a QR code (e.g. a link to their community for recruitment), then print the page out and laminate it.
 
 ## Demo

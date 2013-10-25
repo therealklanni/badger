@@ -1,3 +1,5 @@
+// exported signinCallback
+
 // Load Google+ API
 (function() {
 	var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true;
@@ -5,7 +7,7 @@
 	var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);
 })();
 
-var signinCallback = function(authResult) {
+signinCallback = function(authResult) {
 	if (authResult.access_token) {
 		$('.signin').fadeOut();
 
@@ -32,4 +34,4 @@ var signinCallback = function(authResult) {
 	} else if (authResult.error) {
 		throw new Error('Problem signing in:', authResult.error);
 	}
-}
+};

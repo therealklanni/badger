@@ -4,11 +4,10 @@
     "es5": true,
     "esnext": true,
     "bitwise": true,
-    "camelcase": true,
+    "camelcase": false,
     "curly": true,
     "eqeqeq": true,
     "immed": true,
-    "indent": 4,
     "latedef": true,
     "newcap": true,
     "noarg": true,
@@ -16,7 +15,11 @@
     "regexp": true,
     "undef": true,
     "unused": true,
-    "strict": true,
+    "strict": false,
     "trailing": true,
-    "smarttabs": true
+    "smarttabs": true,
+    "globals": {
+      "signinCallback": true
+    },
+    "jquery": true
 }
