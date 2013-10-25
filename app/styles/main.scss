@@ -16,6 +16,8 @@ $lv8: #9627f4;
 $res: #00c2ff;
 $enl: #28f428;
 $neu: #f9f9f9;
+$primary-font: Iceland;
+$secondary-font: Economica;
 
 @mixin badge-level($color) {
   background-color: $color;
@@ -59,7 +61,7 @@ canvas {
 	text-align: center;
 	font-size: 20px;
 	font-weight: bold;
-	font-family: Iceland;
+	font-family: $primary-font;
 	color: $lv0;
 	position: absolute;
 	top: 6mm;
@@ -74,7 +76,7 @@ canvas {
 	line-height: 10mm;
 	text-align: center;
 	font-weight: 700;
-	font-family: Economica;
+	font-family: $secondary-font;
 	color: #000;
 	position: absolute;
 	bottom: 12.3mm;
@@ -92,7 +94,7 @@ canvas {
     border: none;
     background: none;
 
-    a { border: 1px solid #dddddd; }
+    a { border: 1px solid #ddd; }
   }
 }
 
@@ -101,7 +103,7 @@ canvas {
 	top: 3mm;
 	left: 3mm;
 	font-size: 10mm;
-	font-family: Iceland;
+	font-family: $primary-font;
 	background-color: transparent !important;
 }
 
@@ -129,7 +131,7 @@ canvas {
 	left: 3mm;
 	text-align: center;
 	font-weight: bold;
-	font-family: Iceland;
+	font-family: $primary-font;
 	font-size: 12px;
 	color: $lv0;
 }
