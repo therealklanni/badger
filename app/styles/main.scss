@@ -144,5 +144,10 @@ p.small { margin-bottom: 2px; }
 .lv8 { background-color: #9627f4; border-color: #9627f4; color: orange !important; }
 .nudge-down8 { margin-top: 8px !important; }
 .nudge-down10 { margin-top: 10px !important; }
-.footer { margin-top: 40px; }
-.footer p { text-align: center; margin: 0; }
+
+.footer {
+  margin-top: 40px;
+  p {
+    text-align: center; margin: 0;
+  }
+}
