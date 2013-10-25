@@ -5,6 +5,7 @@ node_js:
 branches:
     only:
         - master
+        - develop
 before_script:
     # install dependencies
     - gem update --system
