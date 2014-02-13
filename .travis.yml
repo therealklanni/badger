@@ -13,7 +13,7 @@ before_script:
     - gem install sass
     - gem install compass
     - npm install -g grunt-cli bower
+    - bower install
 script:
     # We want to gate on passing tests and a successful build
-    - bower install
     - grunt
