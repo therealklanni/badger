@@ -6,7 +6,7 @@
     "modernizr": "~2.6.2",
     "jquery": "~2.0.2",
     "jquery-ui": "~1.10.3",
-    "paper": "~0.9.9"
+    "paper": "0.9.9"
   },
   "devDependencies": {}
 }
