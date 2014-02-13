@@ -101,6 +101,21 @@ displayImage = function(file, targetElement) {
 
 ;
 
+$('#customLevel').on('click', function() {
+	$('#customLevelColor').parent().toggle($(this).is(':checked'));
+});
+
+$('#customLevelColor').ColorPickerSliders({
+	size: 'sm',
+	placement: 'bottom',
+	swatches: ['#333', '#fece5a', '#ffa630', '#ff7315', '#e40000', '#fd2992',
+		'#eb26cd', '#c124e0', '#9627f4', '#00c2ff', '#28f428', '#f9f9f9'],
+	order: {
+		opacity: 1,
+		hsl: 2
+	}
+});
+
 // save button
 $('button.save').on('click', function() {
 	agent.filename = 'Badger - '+ agent.codename +'.png';

@@ -15,6 +15,7 @@
 		<link rel='stylesheet' href='http://fonts.googleapis.com/css?family=Economica:700|Iceland' type='text/css'>
 		<!-- build:css styles/jqueryui.css -->
 		<link rel="stylesheet" href="bower_components/jquery-ui/themes/ui-lightness/jquery-ui.css">
+		<link rel="stylesheet" href="styles/colorpickersliders.css">
 		<!-- endbuild -->
 		<link rel="stylesheet" href="styles/main.css">
 		<!-- build:js scripts/vendor/modernizr.js -->
@@ -157,8 +158,17 @@
 							<input type="text" id="setCodename" name="codename" placeholder="CODENAME" data-target=".badge-codename">
 						</li>
 						<li>
-							<label for="setLevel">Set your level:</label>
-							<input id="setLevel" name="level" value="0">
+							<form class="form-inline">
+								<label for="setLevel">Set your level:</label><br>
+								<input id="setLevel" name="level" value="0">
+								<label class="checkbox">
+									<input id="customLevel" type="checkbox"> Use custom level
+								</label>
+							</form>
+							<label class="hide">
+								Choose a color for your level:
+								<input id="customLevelColor" type="text" class="form-control" value="#9627f4">
+							</label>
 						</li>
 						<li>
 							Upload your community logo<sup>1</sup> by dragging an image onto the default logo, or select one here:
@@ -305,9 +315,13 @@
 		<script src="bower_components/jquery-ui/ui/minified/jquery-ui.min.js"></script>
 		<script src="bower_components/sass-bootstrap/js/bootstrap-collapse.js"></script>
 		<script src="bower_components/sass-bootstrap/js/bootstrap-button.js"></script>
+		<script src="bower_components/sass-bootstrap/js/bootstrap-tooltip.js"></script>
+		<script src="bower_components/sass-bootstrap/js/bootstrap-popover.js"></script>
 		<script src="bower_components/paper/dist/paper-core.js"></script>
 		<script src="scripts/canvastoblob.js"></script>
 		<script src="scripts/filesaver.js"></script>
+		<script src="scripts/tinycolor.js"></script>
+		<script src="scripts/colorpickersliders.js"></script>
 		<script src="scripts/main.js"></script>
 		<script src="scripts/plus.js"></script>
 		<!-- endbuild -->

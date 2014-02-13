@@ -116,6 +116,8 @@ module.exports = function (grunt) {
                 '<%= yeoman.app %>/scripts/{,*/}*.js',
                 '!**/canvastoblob.js',
                 '!**/filesaver.js',
+                '!**/tinycolor.js',
+                '!**/colorpickersliders.js',
                 '!<%= yeoman.app %>/scripts/vendor/*',
                 'test/spec/{,*/}*.js'
             ]
