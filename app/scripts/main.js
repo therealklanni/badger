@@ -85,6 +85,12 @@ setLevel = function(lv) {
 	$('.badge-level').removeClass('lv0 lv1 lv2 lv3 lv4 lv5 lv6 lv7 lv8').addClass('lv'+ lv).text(lv);
 	$('#badge-flag-svg').find('path').css('fill', fillColor);
 
+	if (lv > 9) {
+		$('.badge-level').addClass('badge-level-big');
+	} else {
+		$('.badge-level').removeClass('badge-level-big');
+	}
+
 	return lv;
 },
 
@@ -211,12 +217,18 @@ $('#setLevel').spinner({
 		drawBadgeFront(agent);
 	},
 	spin: function(_, ui) {
-		if (ui.value > 8) {
+		var custom = $('#customLevel').is(':checked');
+
+		if ((ui.value > 8 && !custom) || ui.value > 99) {
 			$(this).spinner('value', 0);
 
 			return false;
-		} else if (ui.value < 0) {
+		} else if (ui.value < 0 && !custom) {
 			$(this).spinner('value', 8);
+
+			return false;
+		} else if (ui.value < 0) {
+			$(this).spinner('value', 99);
 
 			return false;
 		}
@@ -267,4 +279,4 @@ if (!community_defaults.enlightened) {
 	$('.resistance.badge-base').show();
 }
 
-})();
+}());

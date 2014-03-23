@@ -107,6 +107,15 @@ canvas {
 	background-color: transparent !important;
 }
 
+.badge-level-big {
+	position: absolute;
+	top: 3mm;
+	left: 1mm;
+	font-size: 8mm;
+	font-family: $primary-font;
+	background-color: transparent !important;
+}
+
 .badge-scancode-blank {
 	width: 30mm;
 	height: 5mm;
@@ -137,7 +146,7 @@ canvas {
 }
 
 #setLevel {
-	width: 10px;
+	width: 18px;
 }
 
 .editable {
