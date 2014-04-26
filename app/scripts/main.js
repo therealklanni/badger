@@ -13,12 +13,10 @@ agent = {
 	color: null
 },
 
-// TODO when any value is changed draw the badge
-
 // draw front badge design onto canvas
 drawBadgeFront = function(agent) {
 	var blank, logo, scancode, codename, flag, level,
-		color = agent.color.toRgb();
+		color = agent.color ? agent.color.toRgb() : null;
 		canvas = $('#canvas')[0];
 
 	paper.setup(canvas);
@@ -46,7 +44,7 @@ drawBadgeFront = function(agent) {
 			segments: [[149,190], [149,214], [184,214], [184,173], [164,173]]
 		});
 
-		if (agent.color && $('#customLevel').is(':checked')) {
+		if (color && $('#customLevel').is(':checked')) {
 			flag.fillColor = new Color(color.r / 255, color.g / 255, color.b / 255, color.a);
 		} else {
 			flag.fillColor = ['#333', '#fece5a', '#ffa630', '#ff7315', '#e40000', '#fd2992', '#eb26cd', '#c124e0', '#9627f4'][agent.level];
