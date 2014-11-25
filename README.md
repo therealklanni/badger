@@ -6,7 +6,7 @@ A simple app for creating and printing out custom **[Ingress](http://ingress.com
 
 ## Demo
 
-[http://therealklanni.github.io/badger](http://therealklanni.github.io/badger)
+[http://azenl.com/badger/](http://azenl.com/badger/)
 
 ## Community customization
 
